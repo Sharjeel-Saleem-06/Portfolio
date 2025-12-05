@@ -146,54 +146,6 @@ export const projects = [
       "Cursor AI integration for dashboard UI",
       "ChatGPT and Cursor AI for documentation"
     ]
-  },
-  {
-    id: 6,
-    title: "Student Performance Predictor",
-    description: "ML-powered web application to predict student math scores based on demographic factors, parental education, and academic performance. Features 88% accuracy with 7 algorithms tested and instant predictions.",
-    longDescription: "A comprehensive Machine Learning project that predicts student math scores using various demographic and academic factors. The system tests 7 different ML algorithms (Random Forest, Linear Regression, Gradient Boosting, XGBoost, CatBoost, AdaBoost, and Decision Tree) and selects the best performing model. Built with Flask for the web interface and Scikit-Learn for model training.",
-    technologies: ["Python", "Flask", "Scikit-Learn", "Pandas", "NumPy", "XGBoost", "CatBoost", "Machine Learning", "Data Science"],
-    category: "Machine Learning",
-    featured: true,
-    liveUrl: "https://student-performance-monitoring.netlify.app/",
-    githubUrl: "https://github.com/Sharjeel-Saleem-06/student-performance-predictor",
-    image: "/projects/student-predictor.png",
-    status: "Completed",
-    year: "2024",
-    features: [
-      "88% prediction accuracy (R² score)",
-      "7 ML algorithms tested and compared",
-      "Instant predictions in milliseconds",
-      "Feature engineering with interaction features",
-      "Data preprocessing pipeline",
-      "GridSearchCV for hyperparameter tuning",
-      "Flask web application",
-      "Responsive modern UI design"
-    ]
-  },
-  {
-    id: 7,
-    title: "AI ChatBot - LangChain & LangGraph",
-    description: "A lightweight LangGraph + LangChain demo chatbot that streams responses and can call external tools (Wikipedia and Arxiv) through a simple graph architecture.",
-    longDescription: "An intelligent chatbot built using LangGraph and LangChain frameworks. The chatbot features streaming responses, tool integration with Wikipedia and Arxiv for knowledge retrieval, and a graph-based architecture for managing conversation flow. Powered by Groq API for fast inference.",
-    technologies: ["Python", "LangGraph", "LangChain", "LangSmith", "Groq API", "Wikipedia API", "Arxiv API", "NLP"],
-    category: "AI/NLP",
-    featured: true,
-    liveUrl: null,
-    githubUrl: "https://github.com/Sharjeel-Saleem-06/ChatBot",
-    image: "/projects/chatbot.png",
-    status: "Completed",
-    year: "2024",
-    features: [
-      "LangGraph-based conversation flow",
-      "LangChain integration for LLM orchestration",
-      "Wikipedia tool for knowledge retrieval",
-      "Arxiv tool for research paper queries",
-      "Streaming chat responses",
-      "Groq API for fast inference",
-      "Graph-based architecture",
-      "Easy to extend with new tools"
-    ]
   }
 ]
 
@@ -257,7 +209,7 @@ export const experience = [
 ]
 
 export const stats = [
-  { label: "Projects", value: "7+", icon: "🚀" },
+  { label: "Projects", value: "5+", icon: "🚀" },
   { label: "Years Exp", value: "2+", icon: "⭐" },
   { label: "Client Satisfaction", value: "100%", icon: "💯" }
 ]
