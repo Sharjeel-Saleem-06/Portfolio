@@ -8,6 +8,9 @@ const ProjectImage = ({ project, theme, surfaceClass }: { project: any, theme: s
   const [imageError, setImageError] = useState(false)
   const [imageLoading, setImageLoading] = useState(true)
 
+  // Check if image is an icon (small/square) that needs special styling
+  const isIconImage = project.image.includes('face-recognition') || project.image.includes('chatbot')
+
   return (
     <>
       {imageLoading && (
@@ -18,16 +21,31 @@ const ProjectImage = ({ project, theme, surfaceClass }: { project: any, theme: s
           </div>
         </div>
       )}
-      <img
-        src={project.image}
-        alt={project.title}
-        className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'}`}
-        onLoad={() => setImageLoading(false)}
-        onError={() => {
-          setImageLoading(false)
-          setImageError(true)
-        }}
-      />
+      {isIconImage ? (
+        <div className={`w-full h-full flex items-center justify-center ${theme === 'dark' ? 'bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800' : 'bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50'}`}>
+          <img
+            src={project.image}
+            alt={project.title}
+            className={`w-28 h-28 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-lg ${imageLoading ? 'opacity-0' : 'opacity-100'}`}
+            onLoad={() => setImageLoading(false)}
+            onError={() => {
+              setImageLoading(false)
+              setImageError(true)
+            }}
+          />
+        </div>
+      ) : (
+        <img
+          src={project.image}
+          alt={project.title}
+          className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'}`}
+          onLoad={() => setImageLoading(false)}
+          onError={() => {
+            setImageLoading(false)
+            setImageError(true)
+          }}
+        />
+      )}
       {imageError && !imageLoading && (
         <div className={`absolute inset-0 ${surfaceClass} flex items-center justify-center`}>
           <div className="text-center p-4">

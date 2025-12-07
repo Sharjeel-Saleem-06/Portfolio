@@ -42,7 +42,7 @@ export const projects = [
     technologies: ["Next.js", "React", "TypeScript", "AI Integration", "TailwindCSS", "Cursor AI"],
     category: "Web Application",
     featured: true,
-    liveUrl: "https://kani-framework.netlify.app/",
+    liveUrl: null,
     githubUrl: "https://github.com/Sharjeel-Saleem-06",
     image: "/projects/kani.jpeg",
     status: "Completed",
@@ -133,7 +133,7 @@ export const projects = [
     featured: true,
     liveUrl: null,
     githubUrl: "https://github.com/Sharjeel-Saleem-06",
-    image: "/projects/face.jpg",
+    image: "/projects/face-recognition.png",
     status: "Completed",
     year: "2024",
     features: [
@@ -181,7 +181,7 @@ export const projects = [
     featured: true,
     liveUrl: null,
     githubUrl: "https://github.com/Sharjeel-Saleem-06/ChatBot",
-    image: "/projects/chatbot.png",
+    image: "/projects/chatbot-new.png",
     status: "Completed",
     year: "2024",
     features: [
