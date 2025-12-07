@@ -6,14 +6,13 @@ import { useTheme } from '../contexts/ThemeContext'
 const Skills = () => {
   const { theme } = useTheme()
 
-  const skillCategories = [
+  const skillCategories: { title: string; skills: string[] }[] = [
     { title: 'Programming Languages', skills: skillsData['Programming Languages'] },
     { title: 'JavaScript Libraries & Frameworks', skills: skillsData['JavaScript Libraries & Frameworks'] },
-    { title: 'DevOps & Tools', skills: skillsData['DevOps & Tools'] },
     { title: 'Web Frameworks', skills: skillsData['Web Frameworks'] },
     { title: 'Backend as a Service', skills: skillsData['Backend as a Service'] },
-    { title: 'Testing', skills: skillsData['Testing'] },
     { title: 'AI/ML', skills: skillsData['AI/ML'] },
+    { title: 'Prompt Engineering & AI Tools', skills: skillsData['Prompt Engineering & AI Tools'] },
     { title: 'Frontend', skills: skillsData['Frontend'] },
     { title: 'Mobile', skills: skillsData['Mobile'] },
     { title: 'Database', skills: skillsData['Database'] },
@@ -48,7 +47,7 @@ const Skills = () => {
             Technical Skills
           </h2>
           <p className={`text-lg ${textSecondaryClass} max-w-2xl mx-auto leading-relaxed`}>
-            Comprehensive expertise across modern development stack with focus on scalable web applications, AI/ML integration, and DevOps practices.
+            Comprehensive expertise across modern development stack with focus on scalable web applications, AI/ML integration, prompt engineering tools, and fast backend APIs.
           </p>
         </motion.div>
 
