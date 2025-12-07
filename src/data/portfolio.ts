@@ -22,13 +22,13 @@ export const personalInfo = {
 
 export const skillsData = {
   "Programming Languages": ["JavaScript", "TypeScript", "Python", "Java", "Kotlin", "SQL"],
-  "JavaScript Libraries & Frameworks": ["React.js", "Next.js", "Node.js", "Express.js", "Bun.js", "Deno", "Vanilla JS"],
+  "JavaScript Libraries & Frameworks": ["React.js", "Next.js", "Node.js", "Express.js"],
   "Web Frameworks": ["Express.js", "Fastify", "FastAPI"],
-  "Backend as a Service": ["Firebase", "Appwrite"],
   "AI/ML": ["YOLOv8", "OpenCV", "NLP", "Deep Learning", "Machine Learning", "AI Prompt Engineering"],
-  "Frontend": ["HTML5", "CSS3", "Tailwind CSS", "SCSS/Sass", "Framer Motion"],
-  "Mobile": ["React Native", "Kotlin", "Java"],
+  "Frontend": ["HTML5", "CSS3", "Tailwind CSS", "Framer Motion"],
+  "Mobile": ["React Native", "Kotlin", "Java", "iOS (Swift)"],
   "Database": ["PostgreSQL", "MongoDB", "MySQL", "Supabase", "Firebase"],
+  "Optimization & Cost Control": ["Kani Token Optimization (JavaScript)", "Prompt Budgeting", "LLM Cost Tuning", "Inference Efficiency"],
   "Prompt Engineering & AI Tools": ["Cursor AI", "Claude", "Windsurf", "Trae AI", "Google Antigravity", "Vibe Coding"]
 }
 
