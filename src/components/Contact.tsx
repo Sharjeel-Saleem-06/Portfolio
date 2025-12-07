@@ -102,7 +102,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-6 flex flex-col items-center text-center md:items-start md:text-left"
           >
             <div>
               <h3 className={`text-2xl font-bold ${textClass} mb-4`}>
@@ -114,29 +114,29 @@ const Contact = () => {
             </div>
 
             {/* Contact Details */}
-            <div className="space-y-4">
+            <div className="space-y-4 w-full">
               <a
                 href={`mailto:${personalInfo.email}`}
-                className={`flex items-center gap-3 ${textSecondaryClass} hover:${accentClass} transition-colors`}
+                className={`flex items-center gap-3 justify-center md:justify-start ${textSecondaryClass} hover:${accentClass} transition-colors`}
               >
                 <Mail size={20} />
                 <span>{personalInfo.email}</span>
               </a>
               <a
                 href={`tel:${personalInfo.phone}`}
-                className={`flex items-center gap-3 ${textSecondaryClass} hover:${accentClass} transition-colors`}
+                className={`flex items-center gap-3 justify-center md:justify-start ${textSecondaryClass} hover:${accentClass} transition-colors`}
               >
                 <Phone size={20} />
                 <span>{personalInfo.phone}</span>
               </a>
-              <div className={`flex items-center gap-3 ${textSecondaryClass}`}>
+              <div className={`flex items-center gap-3 justify-center md:justify-start ${textSecondaryClass}`}>
                 <MapPin size={20} />
                 <span>{personalInfo.location}</span>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4 pt-4">
+            <div className="flex gap-4 pt-4 justify-center md:justify-start">
               <a
                 href={personalInfo.social.github}
                 target="_blank"

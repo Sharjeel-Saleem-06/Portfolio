@@ -237,7 +237,8 @@ export const experience = [
       "Developed cross-platform mobile and web applications with AI integration",
       "Utilized AI tools including Cursor AI, Claude Code, and Trae AI for accelerated development",
       "Built intelligent applications that transform complex problems into elegant solutions",
-      "Implemented AI-powered features for enhanced user experience and productivity"
+      "Implemented AI-powered features for enhanced user experience and productivity",
+      "Owned Android and iOS apps end-to-end (architecture to launch) and provide AI-powered support for both platforms"
     ],
     technologies: ["Python", "AI/ML", "YOLOv8", "Next.js", "React", "TypeScript", "Cursor AI", "Claude Code", "Trae AI", "Deep Learning", "Mobile Development"]
   },
