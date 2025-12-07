@@ -125,6 +125,32 @@ export const projects = [
   },
   {
     id: 5,
+    title: "StudyFlow - AI-Powered Learning Platform",
+    description: "AI-powered gamified learning platform with 10+ game modes, adaptive quizzes, and global leaderboards. Features AI-generated quizzes, achievement system, and 50K+ active learners across 120+ countries.",
+    longDescription: "StudyFlow is a cutting-edge gamified learning platform that transforms education into an engaging adventure. The platform uses AI to generate personalized quizzes tailored to each learner's style and knowledge level. With 10 exciting game modes including Adventure Mode, Battle Mode, Boss Fights, and Time Attack, learning becomes addictive and fun. The platform features global leaderboards, comprehensive analytics, and an achievement system to track progress.",
+    technologies: ["React", "TypeScript", "Vite", "TailwindCSS", "ShadCN UI", "Framer Motion", "AI/ML", "Gamification"],
+    category: "Web Application",
+    featured: true,
+    liveUrl: "https://studyflow-quizapp.netlify.app/",
+    githubUrl: "https://github.com/Sharjeel-Saleem-06",
+    image: "/projects/studyflow.png",
+    status: "Completed",
+    year: "2025",
+    features: [
+      "AI-Powered Quiz Generation",
+      "10 Engaging Game Modes",
+      "Global Leaderboards",
+      "Adaptive Learning System",
+      "Achievement & XP System",
+      "50K+ Active Learners",
+      "120+ Countries",
+      "Detailed Analytics Dashboard",
+      "Multiple Quiz Categories",
+      "Real-time Competitions"
+    ]
+  },
+  {
+    id: 6,
     title: "Face Recognition Attendance System",
     description: "Comprehensive attendance management system using Python, OpenCV, and MySQL. Features real-time face detection, CRUD operations, and AI-powered documentation with Cursor AI integration.",
     longDescription: "A complete face recognition system built for student attendance management. The system uses OpenCV for real-time face detection and recognition, with MySQL database for data storage and Tkinter for the user interface. Integrated with Cursor AI for dashboard UI development and comprehensive documentation.",
@@ -148,7 +174,7 @@ export const projects = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Student Performance Predictor",
     description: "ML-powered web application to predict student math scores based on demographic factors, parental education, and academic performance. Features 88% accuracy with 7 algorithms tested and instant predictions.",
     longDescription: "A comprehensive Machine Learning project that predicts student math scores using various demographic and academic factors. The system tests 7 different ML algorithms (Random Forest, Linear Regression, Gradient Boosting, XGBoost, CatBoost, AdaBoost, and Decision Tree) and selects the best performing model. Built with Flask for the web interface and Scikit-Learn for model training.",
@@ -172,7 +198,7 @@ export const projects = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     title: "AI ChatBot - LangChain & LangGraph",
     description: "A lightweight LangGraph + LangChain demo chatbot that streams responses and can call external tools (Wikipedia and Arxiv) through a simple graph architecture.",
     longDescription: "An intelligent chatbot built using LangGraph and LangChain frameworks. The chatbot features streaming responses, tool integration with Wikipedia and Arxiv for knowledge retrieval, and a graph-based architecture for managing conversation flow. Powered by Groq API for fast inference.",
@@ -257,7 +283,7 @@ export const experience = [
 ]
 
 export const stats = [
-  { label: "Projects", value: "7+", icon: "🚀" },
+  { label: "Projects", value: "8+", icon: "🚀" },
   { label: "Years Exp", value: "2+", icon: "⭐" },
   { label: "Client Satisfaction", value: "100%", icon: "💯" }
 ]
