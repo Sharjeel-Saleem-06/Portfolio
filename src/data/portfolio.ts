@@ -41,7 +41,7 @@ export const projects = [
     technologies: ["Next.js", "React", "TypeScript", "AI Integration", "TailwindCSS", "Cursor AI"],
     category: "Web Application",
     featured: true,
-    liveUrl: null,
+    liveUrl: "https://kani-llm-token-optimizer.netlify.app/",
     githubUrl: "https://github.com/Sharjeel-Saleem-06/Kani-LLM-Token-Optimizer",
     image: "/projects/kani.jpeg",
     status: "Completed",
