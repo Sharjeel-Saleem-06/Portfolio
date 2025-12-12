@@ -9,7 +9,7 @@ export const personalInfo = {
   profileImage: "/profile_image.png",
   cvFile: "/M.Sharjeel_Saleem.pdf",
   
-  bio: "I'm M. Sharjeel Saleem, a passionate Full-Stack AI Prompt Engineer who bridges the gap between cutting-edge artificial intelligence and practical software solutions. With over 2 years of experience in AI-driven development, I specialize in creating intelligent applications that transform complex problems into elegant, user-friendly experiences.\n\nCurrently at Sideline Technologies, I leverage advanced AI tools like Cursor AI, Claude Code, and Trae AI to accelerate development workflows and build next-generation applications. My expertise spans from developing YOLOv8-powered computer vision systems for traffic management to creating AI-integrated communication platforms that revolutionize how businesses interact with their clients.\n\nI believe in the power of AI to enhance human creativity and productivity, and I'm dedicated to crafting solutions that are not just functional, but truly intelligent.",
+  bio: "I'm M. Sharjeel Saleem, a passionate Full-Stack AI Prompt Engineer who bridges the gap between cutting-edge artificial intelligence and practical software solutions. With over 1+ years of experience in AI-driven development and actively learning advanced AI/ML techniques, I specialize in creating intelligent applications that transform complex problems into elegant, user-friendly experiences.\n\nCurrently at Sideline Technologies, I leverage advanced AI tools like Cursor AI, Claude Code, and Trae AI to accelerate development workflows and build next-generation applications. My expertise spans from developing YOLOv8-powered computer vision systems for traffic management to creating AI-integrated communication platforms and machine learning models for predictive analytics.\n\nAs an AI Engineer in training, I'm continuously expanding my knowledge in deep learning, natural language processing, and modern AI frameworks. I believe in the power of AI to enhance human creativity and productivity, and I'm dedicated to crafting solutions that are not just functional, but truly intelligent.",
   
   social: {
     github: "https://github.com/Sharjeel-Saleem-06",
@@ -284,7 +284,7 @@ export const experience = [
 
 export const stats = [
   { label: "Projects", value: "8+", icon: "🚀" },
-  { label: "Years Exp", value: "2+", icon: "⭐" },
+  { label: "Years Exp", value: "1+", icon: "⭐" },
   { label: "Client Satisfaction", value: "100%", icon: "💯" }
 ]
 

@@ -60,7 +60,7 @@ const Hero = () => {
               </h1>
               <p className={`text-xl ${textSecondaryClass}`}>
                 {personalInfo.title} crafting digital experiences with{' '}
-                <span className={`${textClass} font-semibold`}>2+ years</span> of expertise
+                <span className={`${textClass} font-semibold`}>1+ years</span> of expertise
               </p>
               <p className={`text-lg ${textSecondaryClass} max-w-2xl`}>
                 {personalInfo.tagline}
