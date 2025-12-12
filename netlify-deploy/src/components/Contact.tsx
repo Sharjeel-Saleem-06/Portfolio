@@ -108,13 +108,9 @@ const Contact = () => {
               <h3 className={`text-2xl font-bold ${textClass} mb-4`}>
                 Let's Connect
               </h3>
-              <div className={`${textSecondaryClass} space-y-3`}>
-                {personalInfo.bio.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
+              <p className={textSecondaryClass}>
+                {personalInfo.bio}
+              </p>
             </div>
 
             {/* Contact Details */}
