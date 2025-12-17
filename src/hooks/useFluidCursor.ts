@@ -5,19 +5,20 @@ const useFluidCursor = () => {
   
   resizeCanvas();
 
+  // Optimized config for better performance
   let config = {
-    SIM_RESOLUTION: 128,
-    DYE_RESOLUTION: 1440,
-    CAPTURE_RESOLUTION: 1512,
-    DENSITY_DISSIPATION: 0.5,
-    VELOCITY_DISSIPATION: 3,
+    SIM_RESOLUTION: 64,        // Reduced from 128
+    DYE_RESOLUTION: 512,       // Reduced from 1440 - major performance gain
+    CAPTURE_RESOLUTION: 512,   // Reduced from 1512
+    DENSITY_DISSIPATION: 0.7,  // Faster fade for less GPU work
+    VELOCITY_DISSIPATION: 4,   // Faster decay
     PRESSURE: 0.1,
-    PRESSURE_ITERATIONS: 20,
-    CURL: 3,
-    SPLAT_RADIUS: 0.2,
-    SPLAT_FORCE: 4000,
-    SHADING: true,
-    COLOR_UPDATE_SPEED: 8,
+    PRESSURE_ITERATIONS: 10,   // Reduced from 20
+    CURL: 2,                   // Reduced from 3
+    SPLAT_RADIUS: 0.15,        // Slightly smaller
+    SPLAT_FORCE: 3000,         // Reduced from 4000
+    SHADING: false,            // Disabled for performance
+    COLOR_UPDATE_SPEED: 6,     // Reduced from 8
     PAUSED: false,
     BACK_COLOR: { r: 0.5, g: 0, b: 0 },
     TRANSPARENT: true,

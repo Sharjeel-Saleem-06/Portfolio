@@ -2,14 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/profile_image.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="M. Sharjeel Saleem - Full-Stack AI Prompt Engineer specializing in AI-driven development, mobile apps, and web technologies." />
+    <meta name="theme-color" content="#0f172a" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/profile_image.png" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/profile_image.png" as="image" />
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    
+    <!-- Optimize font loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" /></noscript>
+    
     <title>M. Sharjeel Saleem - Portfolio</title>
+    
+    <!-- Critical CSS for initial render -->
+    <style>
+      /* Prevent FOUC */
+      html { visibility: visible; opacity: 1; }
+      
+      /* Initial loading state */
+      #root {
+        min-height: 100vh;
+        background: #0f172a;
+      }
+      
+      /* Smooth scrolling */
+      html { scroll-behavior: smooth; }
+      
+      /* Optimize animations */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
-

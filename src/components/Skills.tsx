@@ -2,6 +2,58 @@ import { motion } from 'framer-motion'
 import { Code2 } from 'lucide-react'
 import { skillsData } from '../data/portfolio'
 import { useTheme } from '../contexts/ThemeContext'
+import { memo } from 'react'
+
+// Memoized Skill Badge component
+const SkillBadge = memo(({ skill, badgeBgClass, borderClass, textClass, hoverBorderClass, theme }: any) => (
+  <span
+    className={`px-3 py-1.5 ${badgeBgClass} border ${borderClass} rounded-lg text-sm ${textClass} font-medium ${hoverBorderClass} transition-all duration-150 hover:scale-105 ${
+      theme === 'light' ? 'hover:bg-blue-50/90 hover:border-blue-300/60' : ''
+    }`}
+  >
+    {skill}
+  </span>
+))
+
+SkillBadge.displayName = 'SkillBadge'
+
+// Memoized Category Card component
+const CategoryCard = memo(({ category, index, theme, cardBgClass, borderClass, textClass, accentClass, hoverBorderClass, badgeBgClass, cardHoverClass }: any) => (
+  <motion.div
+    initial={{ opacity: 0, y: 15 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ delay: Math.min(index * 0.05, 0.25), duration: 0.35 }}
+    className={`${cardBgClass} border ${borderClass} rounded-xl p-6 ${hoverBorderClass} transition-all duration-200 shadow-md ${cardHoverClass}`}
+  >
+    {/* Card Header */}
+    <div className="flex items-center gap-3 mb-5">
+      <div className={`p-2.5 ${theme === 'dark' ? 'bg-dark-surface' : 'bg-blue-50/80'} rounded-lg backdrop-blur-sm border ${borderClass}/50`}>
+        <Code2 size={20} className={accentClass} />
+      </div>
+      <h3 className={`text-lg font-semibold ${textClass} tracking-tight`}>
+        {category.title}
+      </h3>
+    </div>
+
+    {/* Skills Badges */}
+    <div className="flex flex-wrap gap-2.5">
+      {category.skills.map((skill: string) => (
+        <SkillBadge
+          key={skill}
+          skill={skill}
+          badgeBgClass={badgeBgClass}
+          borderClass={borderClass}
+          textClass={textClass}
+          hoverBorderClass={hoverBorderClass}
+          theme={theme}
+        />
+      ))}
+    </div>
+  </motion.div>
+))
+
+CategoryCard.displayName = 'CategoryCard'
 
 const Skills = () => {
   const { theme } = useTheme()
@@ -18,16 +70,16 @@ const Skills = () => {
     { title: 'Database', skills: skillsData['Database'] },
   ]
 
-  const bgClass = theme === 'dark' ? 'bg-dark-surface/80 backdrop-blur-sm' : 'bg-gradient-to-br from-gray-50/90 via-white/90 to-blue-50/30 backdrop-blur-sm'
+  const bgClass = theme === 'dark' ? 'bg-dark-surface/80' : 'bg-gradient-to-br from-gray-50/90 via-white/90 to-blue-50/30'
   const cardBgClass = theme === 'dark' 
-    ? 'bg-dark-bg/90 backdrop-blur-md' 
-    : 'bg-gradient-to-br from-white/95 via-white/90 to-blue-50/40 backdrop-blur-md'
+    ? 'bg-dark-bg/90' 
+    : 'bg-gradient-to-br from-white/95 via-white/90 to-blue-50/40'
   const borderClass = theme === 'dark' ? 'border-dark-border' : 'border-gray-200/60'
   const textClass = theme === 'dark' ? 'text-dark-text' : 'text-gray-900'
   const textSecondaryClass = theme === 'dark' ? 'text-dark-text-secondary' : 'text-gray-600'
   const accentClass = theme === 'dark' ? 'text-dark-accent' : 'text-blue-600'
   const hoverBorderClass = theme === 'dark' ? 'hover:border-dark-accent/50' : 'hover:border-blue-400/60'
-  const badgeBgClass = theme === 'dark' ? 'bg-dark-surface' : 'bg-white/70 backdrop-blur-sm'
+  const badgeBgClass = theme === 'dark' ? 'bg-dark-surface' : 'bg-white/70'
   const cardHoverClass = theme === 'dark' 
     ? 'hover:shadow-xl hover:shadow-dark-accent/10' 
     : 'hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1'
@@ -37,10 +89,10 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
           className="text-center mb-12"
         >
           <h2 className={`text-4xl md:text-5xl font-bold ${textClass} mb-4 drop-shadow-sm`}>
@@ -54,38 +106,19 @@ const Skills = () => {
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
-            <motion.div
+            <CategoryCard
               key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`${cardBgClass} border ${borderClass} rounded-xl p-6 ${hoverBorderClass} transition-all duration-300 shadow-md ${cardHoverClass}`}
-            >
-              {/* Card Header */}
-              <div className="flex items-center gap-3 mb-5">
-                <div className={`p-2.5 ${theme === 'dark' ? 'bg-dark-surface' : 'bg-blue-50/80'} rounded-lg backdrop-blur-sm border ${borderClass}/50`}>
-                  <Code2 size={20} className={accentClass} />
-                </div>
-                <h3 className={`text-lg font-semibold ${textClass} tracking-tight`}>
-                  {category.title}
-                </h3>
-              </div>
-
-              {/* Skills Badges */}
-              <div className="flex flex-wrap gap-2.5">
-                {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className={`px-3 py-1.5 ${badgeBgClass} border ${borderClass} rounded-lg text-sm ${textClass} font-medium ${hoverBorderClass} transition-all duration-200 hover:scale-105 ${
-                      theme === 'light' ? 'hover:bg-blue-50/90 hover:border-blue-300/60' : ''
-                    }`}
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+              category={category}
+              index={index}
+              theme={theme}
+              cardBgClass={cardBgClass}
+              borderClass={borderClass}
+              textClass={textClass}
+              accentClass={accentClass}
+              hoverBorderClass={hoverBorderClass}
+              badgeBgClass={badgeBgClass}
+              cardHoverClass={cardHoverClass}
+            />
           ))}
         </div>
       </div>

@@ -2,6 +2,22 @@ import { motion } from 'framer-motion'
 import { Download } from 'lucide-react'
 import { personalInfo, stats } from '../data/portfolio'
 import { useTheme } from '../contexts/ThemeContext'
+import { memo } from 'react'
+
+// Memoized Stats component
+const StatItem = memo(({ stat, index, textClass, textSecondaryClass }: any) => (
+  <motion.div
+    initial={{ opacity: 0, y: 15 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.3 + index * 0.08, duration: 0.3 }}
+    className="text-center"
+  >
+    <div className={`text-3xl font-bold ${textClass}`}>{stat.value}</div>
+    <div className={`text-sm ${textSecondaryClass} mt-1`}>{stat.label}</div>
+  </motion.div>
+))
+
+StatItem.displayName = 'StatItem'
 
 const Hero = () => {
   const { theme } = useTheme()
@@ -35,16 +51,16 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
             className={`space-y-6 ${surfaceClass}/80 backdrop-blur-md rounded-2xl p-8 border ${borderClass}/50`}
           >
             {/* Available Badge */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.4 }}
+              transition={{ delay: 0.1, duration: 0.3 }}
               className={`inline-flex items-center gap-2 px-4 py-2 ${surfaceClass} border ${borderClass} rounded-lg backdrop-blur-sm`}
             >
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
@@ -70,16 +86,16 @@ const Hero = () => {
             {/* Buttons */}
             <div className="flex flex-wrap gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={scrollToProjects}
                 className={`px-6 py-3 ${surfaceClass} border ${borderClass} rounded-lg ${textClass} ${hoverBgClass} transition-colors`}
               >
                 View My Work
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={handleDownloadCV}
                 className="px-6 py-3 bg-dark-accent rounded-lg text-white hover:bg-blue-600 transition-colors flex items-center gap-2"
               >
@@ -91,25 +107,22 @@ const Hero = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8">
               {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 + index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className={`text-3xl font-bold ${textClass}`}>{stat.value}</div>
-                  <div className={`text-sm ${textSecondaryClass} mt-1`}>{stat.label}</div>
-                </motion.div>
+                <StatItem 
+                  key={stat.label} 
+                  stat={stat} 
+                  index={index} 
+                  textClass={textClass} 
+                  textSecondaryClass={textSecondaryClass} 
+                />
               ))}
             </div>
           </motion.div>
 
           {/* Right Content - Profile Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            transition={{ delay: 0.15, duration: 0.4 }}
             className="relative flex justify-center lg:justify-end"
           >
             <div className="relative">
@@ -118,6 +131,8 @@ const Hero = () => {
                 <img
                   src={personalInfo.profileImage}
                   alt={personalInfo.name}
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
               </div>
