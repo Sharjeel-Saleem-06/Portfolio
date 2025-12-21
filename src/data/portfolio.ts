@@ -219,6 +219,34 @@ export const projects = [
       "Graph-based architecture",
       "Easy to extend with new tools"
     ]
+  },
+  {
+    id: 9,
+    title: "AI Dev Updates - Real-Time News Aggregator",
+    description: "Lightning-fast AI news aggregator for developers. Real-time updates on model launches, IDE updates, Cursor, Claude, GPT - everything you need to stay ahead. Powered by Groq Llama 3 with intelligent categorization.",
+    longDescription: "AI Dev Updates is a comprehensive news aggregator built specifically for AI developers and vibe coders. The platform aggregates news from 29 curated RSS sources including OpenAI, Anthropic, Google AI, GitHub, and more. Using Groq's lightning-fast Llama 3 inference, it analyzes and categorizes articles in real-time, providing relevance scoring, technical impact assessment, and intelligent deduplication. Features include breaking news sections, advanced filtering, real-time search, and automatic refresh every 15 minutes. The system uses 10 rotating API keys for high availability and implements smart caching to reduce API calls by 85%. With dual-layer caching (7-day analysis cache + 15-minute news cache) and concurrent request protection, the platform delivers news in under 2 seconds while processing 2.9M tokens/day.",
+    technologies: ["Next.js", "React", "TypeScript", "Groq API", "Llama 3", "RSS Feeds", "TailwindCSS", "Advanced Caching", "API Pool Management"],
+    category: "Web Application",
+    featured: true,
+    liveUrl: "https://aidevupdates.netlify.app/",
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/AI_News_Reporter",
+    image: "/projects/ai-news-reporter.png",
+    status: "Completed",
+    year: "2025",
+    features: [
+      "Real-time AI news aggregation from 29 sources",
+      "Groq Llama 3 powered analysis",
+      "Intelligent categorization & relevance scoring",
+      "Breaking news section with priority indicators",
+      "Advanced filtering by category and search",
+      "10 rotating API keys with 99.9% uptime",
+      "Smart caching reduces API calls by 85%",
+      "Auto-refresh every 15 minutes",
+      "Technical impact assessment",
+      "Deduplication & error handling",
+      "First load: ~2s, subsequent loads: <1s",
+      "Processing 2.9M tokens/day efficiently"
+    ]
   }
 ]
 
@@ -283,7 +311,7 @@ export const experience = [
 ]
 
 export const stats = [
-  { label: "Projects", value: "8+", icon: "🚀" },
+  { label: "Projects", value: "9+", icon: "🚀" },
   { label: "Years Exp", value: "1+", icon: "⭐" },
   { label: "Client Satisfaction", value: "100%", icon: "💯" }
 ]

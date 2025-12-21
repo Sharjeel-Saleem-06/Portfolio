@@ -2,13 +2,13 @@ import { useState, useEffect, lazy, Suspense, memo } from 'react'
 import { ThemeProvider, useTheme } from './contexts/ThemeContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import OptimizedBackground from './components/OptimizedBackground'
 
 // Lazy load components below the fold for faster initial load
 const Skills = lazy(() => import('./components/Skills'))
 const Experience = lazy(() => import('./components/Experience'))
 const Projects = lazy(() => import('./components/Projects'))
 const Contact = lazy(() => import('./components/Contact'))
-const FluidCursor = lazy(() => import('./components/FluidCursor'))
 
 // Lightweight loading fallback
 const SectionLoader = memo(() => {
@@ -27,20 +27,7 @@ SectionLoader.displayName = 'SectionLoader'
 
 function AppContent() {
   const [activeSection, setActiveSection] = useState('home')
-  const [showFluidCursor, setShowFluidCursor] = useState(false)
   const { theme } = useTheme()
-
-  useEffect(() => {
-    // Delay fluid cursor loading to prioritize content
-    const timer = setTimeout(() => {
-      // Only show fluid cursor on desktop devices for better mobile performance
-      if (window.innerWidth > 768) {
-        setShowFluidCursor(true)
-      }
-    }, 2000)
-
-    return () => clearTimeout(timer)
-  }, [])
 
   useEffect(() => {
     let ticking = false
@@ -73,12 +60,8 @@ function AppContent() {
 
   return (
     <div className={`min-h-screen relative ${theme === 'dark' ? 'bg-dark-bg' : 'bg-light-bg'}`}>
-      {/* Lazy load fluid cursor only on desktop after initial render */}
-      {showFluidCursor && (
-        <Suspense fallback={null}>
-          <FluidCursor />
-        </Suspense>
-      )}
+      {/* Optimized CSS-based background gradient */}
+      <OptimizedBackground />
       <div className="min-h-screen relative z-0">
         <Navbar activeSection={activeSection} />
         <main className="relative z-10">
