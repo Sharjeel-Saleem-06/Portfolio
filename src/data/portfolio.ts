@@ -1,3 +1,7 @@
+// import { ExternalLink, Github, Mail, MapPin, Phone } from 'lucide-react'
+// import healthScribeImg from '../assets/projects/health-scribe-final.png'
+// import aiDevImg from '../assets/projects/ai-dev-final.png'
+
 export const personalInfo = {
   name: "M. Sharjeel Saleem",
   title: "Full-Stack AI Prompt Engineer",
@@ -8,9 +12,9 @@ export const personalInfo = {
   location: "Pakistan",
   profileImage: "/profile_image.png",
   cvFile: "/M.Sharjeel_Saleem.pdf",
-  
+
   bio: "I'm M. Sharjeel Saleem, a passionate Full-Stack AI Prompt Engineer who bridges the gap between cutting-edge artificial intelligence and practical software solutions. With over 1+ years of experience in AI-driven development and actively learning advanced AI/ML techniques, I specialize in creating intelligent applications that transform complex problems into elegant, user-friendly experiences.\n\nCurrently at Sideline Technologies, I leverage advanced AI tools like Cursor AI, Claude Code, and Trae AI to accelerate development workflows and build next-generation applications. My expertise spans from developing YOLOv8-powered computer vision systems for traffic management to creating AI-integrated communication platforms and machine learning models for predictive analytics.\n\nAs an AI Engineer in training, I'm continuously expanding my knowledge in deep learning, natural language processing, and modern AI frameworks. I believe in the power of AI to enhance human creativity and productivity, and I'm dedicated to crafting solutions that are not just functional, but truly intelligent.",
-  
+
   social: {
     github: "https://github.com/Sharjeel-Saleem-06",
     linkedin: "https://www.linkedin.com/in/msharjeelsaleem/",
@@ -24,7 +28,7 @@ export const skillsData = {
   "Programming Languages": ["JavaScript", "TypeScript", "Python", "Java", "Kotlin", "SQL"],
   "JavaScript Libraries & Frameworks": ["React.js", "Next.js", "Node.js", "Express.js"],
   "Web Frameworks": ["Express.js", "Fastify", "FastAPI"],
-  "AI/ML": ["YOLOv8", "OpenCV", "NLP", "Deep Learning", "Machine Learning", "AI Prompt Engineering"],
+  "AI/ML": ["YOLOv8", "OpenCV", "NLP", "Deep Learning", "Machine Learning", "AI Prompt Engineering", "RAG", "Vector Search"],
   "Frontend": ["HTML5", "CSS3", "Tailwind CSS", "Framer Motion"],
   "Mobile": ["React Native", "Kotlin", "Java", "iOS (Swift)"],
   "Database": ["PostgreSQL", "MongoDB", "MySQL", "Supabase", "Firebase"],
@@ -35,6 +39,66 @@ export const skillsData = {
 export const projects = [
   {
     id: 1,
+    title: "BaatCheet - AI Chat Platform (Web)",
+    description: "A multilingual AI-powered chat platform supporting Urdu, English, Hindi, and Roman Urdu. Features advanced AI models, voice chat, image generation, and team collaboration tools with 10K+ active users.",
+    longDescription: "BaatCheet is a comprehensive AI communication platform that supports multiple languages and AI modes. Built with React, TypeScript, and integrated with multiple AI providers (Groq, OpenRouter, DeepSeek, Gemini), it offers chat, code generation, research, image generation, and team project collaboration features. The platform features 7 specialized AI modes, real-time streaming responses, 50 messages context memory, voice chat with text-to-speech, image generation with multiple models, and team collaboration with role-based access.",
+    technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "AI/ML", "Groq", "Gemini", "TailwindCSS", "SSE Streaming"],
+    category: "Web Application",
+    featured: true,
+    liveUrl: "https://baatcheet-web.netlify.app/",
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/BaatCheet",
+    image: "/projects/baatcheet-web.png",
+    status: "Completed",
+    year: "2024",
+    features: [
+      "7 specialized AI modes (Chat, Code, Research, Image Gen, Tutor, Creative, Math)",
+      "Multilingual support (Urdu, English, Hindi, Roman Urdu)",
+      "Voice chat with text-to-speech (4 natural voices)",
+      "Image generation with 5 models (FLUX, Stable Diffusion, Playground)",
+      "Team collaboration with role-based access (Admin, Moderator, Viewer)",
+      "Real-time streaming responses via SSE",
+      "50 messages context memory",
+      "10K+ active users, 1M+ messages, 99.9% uptime, 4.9★ rating",
+      "Hybrid search (semantic + keyword)",
+      "Analytics dashboard with usage tracking"
+    ]
+  },
+  {
+    id: 2,
+    title: "BaatCheet - AI Chat Platform (Android)",
+    description: "Native Android app for BaatCheet with Jetpack Compose and Material 3. Features offline support, push notifications, and native performance for AI-powered multilingual communication.",
+    longDescription: "BaatCheet Android is a native mobile application built with Kotlin and Jetpack Compose following Clean Architecture and MVVM patterns. It provides the complete BaatCheet experience on mobile with enhanced features like offline support, camera integration, and push notifications. The app uses Retrofit for API calls with SSE streaming, Room Database for local storage, Hilt for dependency injection, and Coil for image loading.",
+    technologies: ["Kotlin", "Jetpack Compose", "Material 3", "MVVM", "Retrofit", "Room DB", "Hilt", "Coil", "SSE Streaming"],
+    category: "Mobile Application",
+    featured: true,
+    liveUrl: null,
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/BaatCheet_Android",
+    image: "/projects/baatcheet-android.png",
+    status: "Completed",
+    year: "2024",
+    downloadInfo: {
+      available: true,
+      type: "firebase",
+      message: "Available via Firebase App Distribution. Contact me to get the download link!",
+      contactEmail: "sharry00010@gmail.com",
+      contactPhone: "+92 332 5760344",
+      contactWhatsApp: "https://wa.me/923325760344?text=Hi!%20I%20want%20to%20install%20BaatCheet%20app"
+    },
+    features: [
+      "Native Android performance with Kotlin",
+      "Modern UI with Jetpack Compose & Material 3",
+      "Offline support with Room Database",
+      "Camera and gallery integration",
+      "Push notifications for real-time updates",
+      "Clean Architecture with MVVM pattern",
+      "Real-time SSE streaming for chat",
+      "Markdown rendering with syntax highlighting",
+      "7 specialized AI modes (Chat, Code, Research, etc.)",
+      "Firebase App Distribution for secure updates"
+    ]
+  },
+  {
+    id: 3,
     title: "Kani Framework - AI Communication Platform",
     description: "An AI-integrated Next.js application for intelligent client communication. Built with modern web technologies and AI integration to streamline business communications and enhance productivity.",
     longDescription: "Kani Framework is a comprehensive communication platform that leverages AI to enhance client interactions. The application features intelligent message routing, automated responses, and AI-powered insights to improve communication efficiency.",
@@ -55,7 +119,7 @@ export const projects = [
     ]
   },
   {
-    id: 2,
+    id: 4,
     title: "DocConverter Pro",
     description: "A powerful, secure, and user-friendly document conversion platform supporting 15+ formats. Features professional-grade conversion with 99.9% uptime and has processed over 1M+ files for 50K+ active users.",
     longDescription: "DocConverter Pro is a comprehensive document conversion solution that handles multiple file formats with professional-grade accuracy. The platform emphasizes security and privacy, processing documents locally in the browser whenever possible.",
@@ -76,7 +140,7 @@ export const projects = [
     ]
   },
   {
-    id: 3,
+    id: 5,
     title: "ImagePro - AI Image Processing",
     description: "Professional AI-powered image processing tools for conversion, editing, enhancement, and text extraction. Completely free and private with 1.2M+ images processed and support for 12 formats.",
     longDescription: "ImagePro offers a comprehensive suite of AI-powered image processing tools that work entirely in your browser. The platform provides professional-grade image manipulation capabilities while maintaining complete privacy and security.",
@@ -97,7 +161,7 @@ export const projects = [
     ]
   },
   {
-    id: 4,
+    id: 6,
     title: "Autopilot Pro - AI-Powered Road Safety System",
     description: "An innovative AI-powered road safety system for smart vehicles using YOLOv8 deep learning technology. Features real-time detection of traffic signs, pedestrians, vehicles (LTV/HTV), and traffic lights with 93% accuracy and 50ms response time.",
     longDescription: "Autopilot Pro is a comprehensive vision-based AI system designed to make roads safer by detecting traffic signs, pedestrians, and vehicles in real-time. Built as a cost-effective alternative to LIDAR and RADAR systems, it uses high-definition cameras and advanced YOLOv8 deep learning models to analyze camera feeds and provide quick, accurate alerts. The system achieves 93% detection accuracy with a 50ms response time, enabling 24/7 continuous monitoring for intelligent traffic management and safety applications.",
@@ -123,7 +187,7 @@ export const projects = [
     ]
   },
   {
-    id: 5,
+    id: 7,
     title: "StudyFlow - AI-Powered Learning Platform",
     description: "AI-powered gamified learning platform with 10+ game modes, adaptive quizzes, and global leaderboards. Features AI-generated quizzes, achievement system, and 50K+ active learners across 120+ countries.",
     longDescription: "StudyFlow is a cutting-edge gamified learning platform that transforms education into an engaging adventure. The platform uses AI to generate personalized quizzes tailored to each learner's style and knowledge level. With 10 exciting game modes including Adventure Mode, Battle Mode, Boss Fights, and Time Attack, learning becomes addictive and fun. The platform features global leaderboards, comprehensive analytics, and an achievement system to track progress.",
@@ -149,7 +213,7 @@ export const projects = [
     ]
   },
   {
-    id: 6,
+    id: 8,
     title: "Face Recognition Attendance System",
     description: "Comprehensive attendance management system using Python, OpenCV, and MySQL. Features real-time face detection, CRUD operations, and AI-powered documentation with Cursor AI integration.",
     longDescription: "A complete face recognition system built for student attendance management. The system uses OpenCV for real-time face detection and recognition, with MySQL database for data storage and Tkinter for the user interface. Integrated with Cursor AI for dashboard UI development and comprehensive documentation.",
@@ -173,7 +237,7 @@ export const projects = [
     ]
   },
   {
-    id: 7,
+    id: 9,
     title: "Student Performance Predictor",
     description: "ML-powered web application to predict student math scores based on demographic factors, parental education, and academic performance. Features 88% accuracy with 7 algorithms tested and instant predictions.",
     longDescription: "A comprehensive Machine Learning project that predicts student math scores using various demographic and academic factors. The system tests 7 different ML algorithms (Random Forest, Linear Regression, Gradient Boosting, XGBoost, CatBoost, AdaBoost, and Decision Tree) and selects the best performing model. Built with Flask for the web interface and Scikit-Learn for model training.",
@@ -197,7 +261,7 @@ export const projects = [
     ]
   },
   {
-    id: 8,
+    id: 10,
     title: "AI ChatBot - LangChain & LangGraph",
     description: "A lightweight LangGraph + LangChain demo chatbot that streams responses and can call external tools (Wikipedia and Arxiv) through a simple graph architecture.",
     longDescription: "An intelligent chatbot built using LangGraph and LangChain frameworks. The chatbot features streaming responses, tool integration with Wikipedia and Arxiv for knowledge retrieval, and a graph-based architecture for managing conversation flow. Powered by Groq API for fast inference.",
@@ -221,7 +285,7 @@ export const projects = [
     ]
   },
   {
-    id: 9,
+    id: 11,
     title: "AI Dev Updates - Real-Time News Aggregator",
     description: "Lightning-fast AI news aggregator for developers. Real-time updates on model launches, IDE updates, Cursor, Claude, GPT - everything you need to stay ahead. Powered by Groq Llama 3 with intelligent categorization.",
     longDescription: "AI Dev Updates is a comprehensive news aggregator built specifically for AI developers and vibe coders. The platform aggregates news from 29 curated RSS sources including OpenAI, Anthropic, Google AI, GitHub, and more. Using Groq's lightning-fast Llama 3 inference, it analyzes and categorizes articles in real-time, providing relevance scoring, technical impact assessment, and intelligent deduplication. Features include breaking news sections, advanced filtering, real-time search, and automatic refresh every 15 minutes. The system uses 10 rotating API keys for high availability and implements smart caching to reduce API calls by 85%. With dual-layer caching (7-day analysis cache + 15-minute news cache) and concurrent request protection, the platform delivers news in under 2 seconds while processing 2.9M tokens/day.",
@@ -230,7 +294,7 @@ export const projects = [
     featured: true,
     liveUrl: "https://aidevupdates.netlify.app/",
     githubUrl: "https://github.com/Sharjeel-Saleem-06/AI_News_Reporter",
-    image: "/projects/ai-news-reporter.png",
+    image: "/projects/p-aidev.jpg",
     status: "Completed",
     year: "2025",
     features: [
@@ -246,6 +310,88 @@ export const projects = [
       "Deduplication & error handling",
       "First load: ~2s, subsequent loads: <1s",
       "Processing 2.9M tokens/day efficiently"
+    ]
+  },
+  {
+    id: 12,
+    title: "HealthScribe AI",
+    description: "AI-powered health document management platform. Analyze medical records, track health metrics, and get personalized insights.",
+    longDescription: "HealthScribe AI is an innovative platform designed to revolutionize how individuals manage their health information. By leveraging advanced AI technology, it allows users to upload and analyze medical records, automatically extracting key information such as medications, allergies, and diagnoses. The system provides personalized health insights, tracks vital metrics over time, and ensures that critical health data is always accessible and organized.",
+    technologies: ["React", "TypeScript", "AI Integration", "TailwindCSS", "Vite", "Netlify"],
+    category: "Web Application",
+    featured: true,
+    liveUrl: "https://healthscribee.netlify.app/",
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/Health_Scribe",
+    image: "/projects/p-health.jpg",
+    status: "Completed",
+    year: "2025",
+    features: [
+      "AI-powered medical record analysis",
+      "Smart health metric tracking",
+      "Personalized health insights",
+      "Secure document storage",
+      "Medication management",
+      "Interactive health dashboard"
+    ]
+  },
+  {
+    id: 13,
+    title: "DocuChat AI - Chat with Documents",
+    description: "AI-powered RAG document chat platform. Upload PDFs and images, ask questions, and get intelligent answers with source citations. Features hybrid search, streaming responses, and Google OAuth authentication.",
+    longDescription: "DocuChat AI is a sophisticated RAG (Retrieval-Augmented Generation) application that allows users to upload documents (PDFs and images) and have intelligent conversations about their content. The platform uses Google Gemini 2.5 Flash for chat and vision capabilities, combined with OpenAI's text-embedding-3-small for vector embeddings. Documents are processed through smart chunking, embedded, and stored in PostgreSQL with pgvector for efficient similarity search. The hybrid search system combines 70% semantic search with 30% keyword matching to retrieve the most relevant context. Features include streaming responses via SSE, conversation history, source citations, dark/light theme, and comprehensive analytics dashboard.",
+    technologies: ["React", "TypeScript", "Supabase", "PostgreSQL", "pgvector", "Google Gemini", "OpenAI Embeddings", "TailwindCSS", "shadcn/ui", "Framer Motion", "RAG", "Vector Search"],
+    category: "AI/RAG Application",
+    featured: true,
+    liveUrl: "https://docuchatai.lovable.app",
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/docuchat-ai",
+    image: "/projects/docuchat-ai.png",
+    status: "Completed",
+    year: "2025",
+    features: [
+      "RAG-powered document Q&A",
+      "PDF & Image upload with OCR",
+      "Google Gemini 2.5 Flash integration",
+      "Hybrid search (70% semantic + 30% keyword)",
+      "OpenAI text-embedding-3-small",
+      "Streaming responses via SSE",
+      "Source citations with relevance scores",
+      "PostgreSQL + pgvector for vector storage",
+      "Google OAuth authentication",
+      "Dark/Light theme support",
+      "Conversation history management",
+      "Analytics dashboard",
+      "Row Level Security (RLS)",
+      "Smart document chunking (1000 chars, 200 overlap)"
+    ]
+  },
+  {
+    id: 14,
+    title: "CodeSentinel AI - AI-Powered Code Analysis",
+    description: "Professional static code analysis platform with AI-powered security scanning. Detect OWASP Top 10 vulnerabilities, analyze code quality, and get intelligent optimization suggestions. Features multi-language support and real-time analysis.",
+    longDescription: "CodeSentinel AI is an enterprise-grade static code analysis tool that combines traditional security scanning with AI-powered intelligent optimization. The platform analyzes code across 15+ programming languages, detecting OWASP Top 10 vulnerabilities, code smells, and security issues in real-time. Using advanced AI algorithms, it provides context-aware suggestions for code improvements, best practices, and performance optimizations. Features include interactive control flow visualization, custom rule creation with AI assistance, senior architect-level reviews, and comprehensive export reports in multiple formats. The platform offers both enterprise-grade security analysis and AI-powered intelligent recommendations, making it perfect for development teams focused on code quality and security.",
+    technologies: ["React", "TypeScript", "AI/ML", "Static Analysis", "TailwindCSS", "shadcn/ui", "Security Scanning", "OWASP", "Code Quality", "Flow Visualization"],
+    category: "DevTools/Security",
+    featured: true,
+    liveUrl: "https://codesentinelai.netlify.app/",
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/codesentinel-ai",
+    image: "/projects/codesentinel-ai.png",
+    status: "Completed",
+    year: "2025",
+    features: [
+      "Multi-language support (15+ languages)",
+      "OWASP Top 10 vulnerability detection",
+      "Real-time code analysis",
+      "AI-powered code optimization",
+      "Custom rule creation with AI",
+      "Senior architect-level reviews",
+      "Interactive control flow graphs",
+      "Security analysis & scanning",
+      "Code quality metrics",
+      "Best practices enforcement",
+      "Export reports in multiple formats",
+      "Dark/Light theme support",
+      "Advanced code metrics",
+      "Intelligent suggestions"
     ]
   }
 ]
@@ -311,7 +457,7 @@ export const experience = [
 ]
 
 export const stats = [
-  { label: "Projects", value: "9+", icon: "🚀" },
+  { label: "Projects", value: "14+", icon: "🚀" },
   { label: "Years Exp", value: "1+", icon: "⭐" },
   { label: "Client Satisfaction", value: "100%", icon: "💯" }
 ]

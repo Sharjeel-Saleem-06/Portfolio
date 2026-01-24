@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import { ExternalLink, Github, Image as ImageIcon } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ExternalLink, Github, Image as ImageIcon, Download, Mail, MessageCircle, X } from 'lucide-react'
 import { projects } from '../data/portfolio'
 import { useTheme } from '../contexts/ThemeContext'
 import { useState, memo } from 'react'
@@ -66,7 +66,7 @@ const ProjectImage = memo(({ project, theme, surfaceClass }: { project: any, the
 ProjectImage.displayName = 'ProjectImage'
 
 // Memoized ProjectCard for better performance
-const ProjectCard = memo(({ project, index, theme, cardBgClass, borderClass, textClass, textSecondaryClass, accentClass, hoverBorderClass, surfaceClass, gradientClass }: any) => (
+const ProjectCard = memo(({ project, index, theme, cardBgClass, borderClass, textClass, textSecondaryClass, accentClass, hoverBorderClass, surfaceClass, gradientClass, onDownloadClick }: any) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ const ProjectCard = memo(({ project, index, theme, cardBgClass, borderClass, tex
 
       {/* Links */}
       <div className="flex gap-4">
-        {project.liveUrl && (
+        {project.liveUrl ? (
           <a
             href={project.liveUrl}
             target="_blank"
@@ -133,7 +133,15 @@ const ProjectCard = memo(({ project, index, theme, cardBgClass, borderClass, tex
             <ExternalLink size={16} />
             View Live Site
           </a>
-        )}
+        ) : project.downloadInfo?.available ? (
+          <button
+            onClick={() => onDownloadClick(project)}
+            className={`flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-green-600 text-white hover:bg-green-700' : 'bg-green-600 text-white hover:bg-green-700'} transition-colors shadow-md hover:shadow-lg`}
+          >
+            <Download size={16} />
+            Get App
+          </button>
+        ) : null}
         {project.githubUrl && (
           <a
             href={project.githubUrl}
@@ -154,6 +162,13 @@ ProjectCard.displayName = 'ProjectCard'
 
 const Projects = () => {
   const { theme } = useTheme()
+  const [showDownloadModal, setShowDownloadModal] = useState(false)
+  const [selectedProject, setSelectedProject] = useState<any>(null)
+
+  const handleDownloadClick = (project: any) => {
+    setSelectedProject(project)
+    setShowDownloadModal(true)
+  }
 
   const bgClass = theme === 'dark' ? 'bg-dark-surface/80' : 'bg-gradient-to-br from-gray-50/90 via-white/90 to-blue-50/30'
   const cardBgClass = theme === 'dark' 
@@ -202,9 +217,100 @@ const Projects = () => {
               hoverBorderClass={hoverBorderClass}
               surfaceClass={surfaceClass}
               gradientClass={gradientClass}
+              onDownloadClick={handleDownloadClick}
             />
           ))}
         </div>
+
+        {/* Download Modal */}
+        <AnimatePresence>
+          {showDownloadModal && selectedProject?.downloadInfo && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4"
+              style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}
+              onClick={() => setShowDownloadModal(false)}
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ type: "spring", duration: 0.5 }}
+                onClick={(e) => e.stopPropagation()}
+                className={`relative w-full max-w-lg ${cardBgClass} border-2 ${borderClass} rounded-2xl p-8 shadow-2xl`}
+              >
+                {/* Close Button */}
+                <button
+                  onClick={() => setShowDownloadModal(false)}
+                  className={`absolute top-4 right-4 p-2 ${textSecondaryClass} ${theme === 'dark' ? 'hover:bg-dark-border/30' : 'hover:bg-gray-100'} rounded-lg transition-colors`}
+                >
+                  <X size={20} />
+                </button>
+
+                {/* Header */}
+                <div className="text-center mb-6">
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className={`w-16 h-16 mx-auto mb-4 ${theme === 'dark' ? 'bg-green-600' : 'bg-green-500'} rounded-full flex items-center justify-center`}
+                  >
+                    <Download className="w-8 h-8 text-white" />
+                  </motion.div>
+                  <h3 className={`text-2xl font-bold ${textClass} mb-2`}>
+                    Get {selectedProject.title}
+                  </h3>
+                  <p className={`${textSecondaryClass}`}>
+                    {selectedProject.downloadInfo.message}
+                  </p>
+                </div>
+
+                {/* Contact Options */}
+                <div className="space-y-3">
+                  {/* Email */}
+                  <a
+                    href={`mailto:${selectedProject.downloadInfo.contactEmail}?subject=BaatCheet App Download Request&body=Hi! I would like to install the BaatCheet Android app. Please send me the download link.`}
+                    className={`flex items-center space-x-4 p-4 ${theme === 'dark' ? 'bg-dark-surface hover:bg-dark-border/30' : 'bg-gray-50 hover:bg-gray-100'} rounded-lg border ${borderClass} transition-all duration-200 group`}
+                  >
+                    <div className={`w-12 h-12 ${theme === 'dark' ? 'bg-blue-600/20' : 'bg-blue-100'} rounded-lg flex items-center justify-center ${theme === 'dark' ? 'group-hover:bg-blue-600/30' : 'group-hover:bg-blue-200'} transition-colors`}            >
+                      <Mail className={`w-6 h-6 ${accentClass}`} />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className={`font-medium ${textClass}`}>Email Request</h4>
+                      <p className={`text-sm ${textSecondaryClass}`}>{selectedProject.downloadInfo.contactEmail}</p>
+                    </div>
+                    <ExternalLink className={`w-5 h-5 ${textSecondaryClass} group-hover:${accentClass} transition-colors`} />
+                  </a>
+
+                  {/* WhatsApp */}
+                  <a
+                    href={selectedProject.downloadInfo.contactWhatsApp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center space-x-4 p-4 ${theme === 'dark' ? 'bg-dark-surface hover:bg-dark-border/30' : 'bg-gray-50 hover:bg-gray-100'} rounded-lg border ${borderClass} transition-all duration-200 group`}
+                  >
+                    <div className={`w-12 h-12 ${theme === 'dark' ? 'bg-green-600/20' : 'bg-green-100'} rounded-lg flex items-center justify-center ${theme === 'dark' ? 'group-hover:bg-green-600/30' : 'group-hover:bg-green-200'} transition-colors`}>
+                      <MessageCircle className="w-6 h-6 text-green-600" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className={`font-medium ${textClass}`}>WhatsApp</h4>
+                      <p className={`text-sm ${textSecondaryClass}`}>{selectedProject.downloadInfo.contactPhone}</p>
+                    </div>
+                    <ExternalLink className={`w-5 h-5 ${textSecondaryClass} group-hover:text-green-600 transition-colors`} />
+                  </a>
+                </div>
+
+                {/* Info Note */}
+                <div className={`mt-6 p-4 ${theme === 'dark' ? 'bg-blue-600/10 border-blue-600/20' : 'bg-blue-50 border-blue-200'} border rounded-lg`}>
+                  <p className={`text-sm ${textSecondaryClass}`}>
+                    ✨ <span className="font-semibold">Firebase App Distribution:</span> You'll receive a secure download link within 24 hours. The app is distributed via Firebase for optimal security and updates.
+                  </p>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   )
