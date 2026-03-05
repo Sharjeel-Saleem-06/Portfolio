@@ -99,6 +99,40 @@ export const projects = [
   },
   {
     id: 3,
+    title: "BaatCheet - AI Chat Platform (iOS)",
+    description: "Native iOS app for BaatCheet built with Swift and SwiftUI. Delivers a premium iPhone experience with smooth animations, haptic feedback, and full integration with Apple ecosystem features.",
+    longDescription: "BaatCheet iOS is a native Swift application crafted for the Apple ecosystem with SwiftUI for a truly native look and feel. It brings the complete BaatCheet AI platform to iPhone with iOS-native features: Face ID / Touch ID authentication, Siri Shortcuts integration, Share Sheet support, widgets, and seamless iCloud sync. Follows Apple HIG guidelines with a clean, minimal design and fluid physics-based animations. Distributed via TestFlight for beta access.",
+    technologies: ["Swift", "SwiftUI", "Combine", "URLSession", "CoreData", "Face ID", "TestFlight", "MVVM"],
+    category: "Mobile Application",
+    featured: true,
+    liveUrl: null,
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/BaatCheet_iOS",
+    image: "/projects/baatcheet-ios.png",
+    status: "Completed",
+    year: "2025",
+    downloadInfo: {
+      available: true,
+      type: "testflight",
+      message: "Available via TestFlight. Contact me to get your invite link!",
+      contactEmail: "sharry00010@gmail.com",
+      contactPhone: "+92 332 5760344",
+      contactWhatsApp: "https://wa.me/923325760344?text=Hi!%20I%20want%20to%20install%20BaatCheet%20iOS%20app"
+    },
+    features: [
+      "Native Swift & SwiftUI for true iPhone feel",
+      "Face ID / Touch ID secure authentication",
+      "7 specialized AI modes (Chat, Code, Research, etc.)",
+      "Multilingual support (Urdu, English, Hindi, Roman Urdu)",
+      "Real-time SSE streaming for AI responses",
+      "CoreData local storage for offline access",
+      "Haptic feedback & smooth physics animations",
+      "iCloud sync across Apple devices",
+      "TestFlight distribution for beta access",
+      "Apple HIG compliant design"
+    ]
+  },
+  {
+    id: 4,
     title: "Kani Framework - AI Communication Platform",
     description: "An AI-integrated Next.js application for intelligent client communication. Built with modern web technologies and AI integration to streamline business communications and enhance productivity.",
     longDescription: "Kani Framework is a comprehensive communication platform that leverages AI to enhance client interactions. The application features intelligent message routing, automated responses, and AI-powered insights to improve communication efficiency.",
@@ -119,7 +153,7 @@ export const projects = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "DocConverter Pro",
     description: "A powerful, secure, and user-friendly document conversion platform supporting 15+ formats. Features professional-grade conversion with 99.9% uptime and has processed over 1M+ files for 50K+ active users.",
     longDescription: "DocConverter Pro is a comprehensive document conversion solution that handles multiple file formats with professional-grade accuracy. The platform emphasizes security and privacy, processing documents locally in the browser whenever possible.",
@@ -140,7 +174,7 @@ export const projects = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: "ImagePro - AI Image Processing",
     description: "Professional AI-powered image processing tools for conversion, editing, enhancement, and text extraction. Completely free and private with 1.2M+ images processed and support for 12 formats.",
     longDescription: "ImagePro offers a comprehensive suite of AI-powered image processing tools that work entirely in your browser. The platform provides professional-grade image manipulation capabilities while maintaining complete privacy and security.",
@@ -161,7 +195,7 @@ export const projects = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Autopilot Pro - AI-Powered Road Safety System",
     description: "An innovative AI-powered road safety system for smart vehicles using YOLOv8 deep learning technology. Features real-time detection of traffic signs, pedestrians, vehicles (LTV/HTV), and traffic lights with 93% accuracy and 50ms response time.",
     longDescription: "Autopilot Pro is a comprehensive vision-based AI system designed to make roads safer by detecting traffic signs, pedestrians, and vehicles in real-time. Built as a cost-effective alternative to LIDAR and RADAR systems, it uses high-definition cameras and advanced YOLOv8 deep learning models to analyze camera feeds and provide quick, accurate alerts. The system achieves 93% detection accuracy with a 50ms response time, enabling 24/7 continuous monitoring for intelligent traffic management and safety applications.",
@@ -187,7 +221,7 @@ export const projects = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     title: "StudyFlow - AI-Powered Learning Platform",
     description: "AI-powered gamified learning platform with 10+ game modes, adaptive quizzes, and global leaderboards. Features AI-generated quizzes, achievement system, and 50K+ active learners across 120+ countries.",
     longDescription: "StudyFlow is a cutting-edge gamified learning platform that transforms education into an engaging adventure. The platform uses AI to generate personalized quizzes tailored to each learner's style and knowledge level. With 10 exciting game modes including Adventure Mode, Battle Mode, Boss Fights, and Time Attack, learning becomes addictive and fun. The platform features global leaderboards, comprehensive analytics, and an achievement system to track progress.",
@@ -213,7 +247,7 @@ export const projects = [
     ]
   },
   {
-    id: 8,
+    id: 9,
     title: "Face Recognition Attendance System",
     description: "Comprehensive attendance management system using Python, OpenCV, and MySQL. Features real-time face detection, CRUD operations, and AI-powered documentation with Cursor AI integration.",
     longDescription: "A complete face recognition system built for student attendance management. The system uses OpenCV for real-time face detection and recognition, with MySQL database for data storage and Tkinter for the user interface. Integrated with Cursor AI for dashboard UI development and comprehensive documentation.",
@@ -237,7 +271,7 @@ export const projects = [
     ]
   },
   {
-    id: 9,
+    id: 10,
     title: "Student Performance Predictor",
     description: "ML-powered web application to predict student math scores based on demographic factors, parental education, and academic performance. Features 88% accuracy with 7 algorithms tested and instant predictions.",
     longDescription: "A comprehensive Machine Learning project that predicts student math scores using various demographic and academic factors. The system tests 7 different ML algorithms (Random Forest, Linear Regression, Gradient Boosting, XGBoost, CatBoost, AdaBoost, and Decision Tree) and selects the best performing model. Built with Flask for the web interface and Scikit-Learn for model training.",
@@ -261,7 +295,7 @@ export const projects = [
     ]
   },
   {
-    id: 10,
+    id: 11,
     title: "AI ChatBot - LangChain & LangGraph",
     description: "A lightweight LangGraph + LangChain demo chatbot that streams responses and can call external tools (Wikipedia and Arxiv) through a simple graph architecture.",
     longDescription: "An intelligent chatbot built using LangGraph and LangChain frameworks. The chatbot features streaming responses, tool integration with Wikipedia and Arxiv for knowledge retrieval, and a graph-based architecture for managing conversation flow. Powered by Groq API for fast inference.",
@@ -285,7 +319,7 @@ export const projects = [
     ]
   },
   {
-    id: 11,
+    id: 12,
     title: "AI Dev Updates - Real-Time News Aggregator",
     description: "Lightning-fast AI news aggregator for developers. Real-time updates on model launches, IDE updates, Cursor, Claude, GPT - everything you need to stay ahead. Powered by Groq Llama 3 with intelligent categorization.",
     longDescription: "AI Dev Updates is a comprehensive news aggregator built specifically for AI developers and vibe coders. The platform aggregates news from 29 curated RSS sources including OpenAI, Anthropic, Google AI, GitHub, and more. Using Groq's lightning-fast Llama 3 inference, it analyzes and categorizes articles in real-time, providing relevance scoring, technical impact assessment, and intelligent deduplication. Features include breaking news sections, advanced filtering, real-time search, and automatic refresh every 15 minutes. The system uses 10 rotating API keys for high availability and implements smart caching to reduce API calls by 85%. With dual-layer caching (7-day analysis cache + 15-minute news cache) and concurrent request protection, the platform delivers news in under 2 seconds while processing 2.9M tokens/day.",
@@ -313,7 +347,7 @@ export const projects = [
     ]
   },
   {
-    id: 12,
+    id: 13,
     title: "HealthScribe AI",
     description: "AI-powered health document management platform. Analyze medical records, track health metrics, and get personalized insights.",
     longDescription: "HealthScribe AI is an innovative platform designed to revolutionize how individuals manage their health information. By leveraging advanced AI technology, it allows users to upload and analyze medical records, automatically extracting key information such as medications, allergies, and diagnoses. The system provides personalized health insights, tracks vital metrics over time, and ensures that critical health data is always accessible and organized.",
@@ -335,7 +369,7 @@ export const projects = [
     ]
   },
   {
-    id: 13,
+    id: 14,
     title: "DocuChat AI - Chat with Documents",
     description: "AI-powered RAG document chat platform. Upload PDFs and images, ask questions, and get intelligent answers with source citations. Features hybrid search, streaming responses, and Google OAuth authentication.",
     longDescription: "DocuChat AI is a sophisticated RAG (Retrieval-Augmented Generation) application that allows users to upload documents (PDFs and images) and have intelligent conversations about their content. The platform uses Google Gemini 2.5 Flash for chat and vision capabilities, combined with OpenAI's text-embedding-3-small for vector embeddings. Documents are processed through smart chunking, embedded, and stored in PostgreSQL with pgvector for efficient similarity search. The hybrid search system combines 70% semantic search with 30% keyword matching to retrieve the most relevant context. Features include streaming responses via SSE, conversation history, source citations, dark/light theme, and comprehensive analytics dashboard.",
@@ -365,7 +399,7 @@ export const projects = [
     ]
   },
   {
-    id: 14,
+    id: 15,
     title: "CodeSentinel AI - AI-Powered Code Analysis",
     description: "Professional static code analysis platform with AI-powered security scanning. Detect OWASP Top 10 vulnerabilities, analyze code quality, and get intelligent optimization suggestions. Features multi-language support and real-time analysis.",
     longDescription: "CodeSentinel AI is an enterprise-grade static code analysis tool that combines traditional security scanning with AI-powered intelligent optimization. The platform analyzes code across 15+ programming languages, detecting OWASP Top 10 vulnerabilities, code smells, and security issues in real-time. Using advanced AI algorithms, it provides context-aware suggestions for code improvements, best practices, and performance optimizations. Features include interactive control flow visualization, custom rule creation with AI assistance, senior architect-level reviews, and comprehensive export reports in multiple formats. The platform offers both enterprise-grade security analysis and AI-powered intelligent recommendations, making it perfect for development teams focused on code quality and security.",
@@ -398,7 +432,7 @@ export const projects = [
 
 export const experience = [
   {
-    id: 1,
+    id: 16,
     position: "Full-Stack AI Prompt Engineer",
     company: "Sideline Technologies",
     companyUrl: "https://sideline-technologies.com",
@@ -417,7 +451,7 @@ export const experience = [
     technologies: ["Python", "AI/ML", "YOLOv8", "Next.js", "React", "TypeScript", "Cursor AI", "Claude Code", "Trae AI", "Deep Learning", "Mobile Development"]
   },
   {
-    id: 2,
+    id: 17,
     position: "Prompt Engineer",
     company: "ReactiveSpace",
     companyUrl: "https://reactivespace.com",
@@ -435,7 +469,7 @@ export const experience = [
     technologies: ["Cursor AI", "Next.js", "TypeScript", "React", "Tailwind CSS", "NLP", "AI Automation", "Chatbot Development"]
   },
   {
-    id: 3,
+    id: 18,
     position: "Python Developer",
     company: "Dataventiv LLC",
     companyUrl: "https://dataventiv.com",

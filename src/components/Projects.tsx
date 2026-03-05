@@ -65,31 +65,46 @@ const ProjectImage = memo(({ project, theme, surfaceClass }: { project: any, the
 
 ProjectImage.displayName = 'ProjectImage'
 
-// Memoized ProjectCard for better performance
+// Memoized ProjectCard with enhanced animations from reference
 const ProjectCard = memo(({ project, index, theme, cardBgClass, borderClass, textClass, textSecondaryClass, accentClass, hoverBorderClass, surfaceClass, gradientClass, onDownloadClick }: any) => (
   <motion.div
-    initial={{ opacity: 0, y: 20 }}
+    initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
-    transition={{ delay: Math.min(index * 0.05, 0.3), duration: 0.4 }}
-    className={`${cardBgClass} border-2 ${borderClass} rounded-xl overflow-hidden ${hoverBorderClass} transition-all duration-200 group shadow-xl ${
-      theme === 'light' ? 'hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1' : ''
-    }`}
+    viewport={{ once: true, margin: '-50px' }}
+    transition={{ delay: Math.min(index * 0.08, 0.4), duration: 0.5, type: 'spring' }}
+    whileHover={{ y: -8, transition: { duration: 0.3 } }}
+    className={`${cardBgClass} border-2 ${borderClass} rounded-xl overflow-hidden ${hoverBorderClass} transition-all duration-300 group shadow-xl hover:shadow-2xl ${theme === 'dark' ? 'hover:shadow-blue-500/20' : 'hover:shadow-blue-500/15'
+      }`}
   >
-    {/* Project Image */}
+    {/* Project Image with zoom effect on hover */}
     <div className={`relative h-48 overflow-hidden ${surfaceClass}`}>
-      <ProjectImage 
-        project={project} 
-        theme={theme} 
-        surfaceClass={surfaceClass}
-      />
-      <div className={`absolute inset-0 ${gradientClass} to-transparent pointer-events-none`}></div>
-      {/* Live Badge */}
+      <motion.div
+        whileHover={{ scale: 1.08 }}
+        transition={{ duration: 0.4 }}
+        className="h-full w-full"
+      >
+        <ProjectImage
+          project={project}
+          theme={theme}
+          surfaceClass={surfaceClass}
+        />
+      </motion.div>
+      <div className={`absolute inset-0 ${gradientClass} to-transparent pointer-events-none transition-opacity duration-300 group-hover:opacity-50`}></div>
+      {/* Live Badge - animated pulse */}
       {project.liveUrl && (
-        <div className={`absolute top-3 right-3 px-2.5 py-1 ${theme === 'dark' ? 'bg-green-600/90' : 'bg-green-500/90'} backdrop-blur-sm rounded-full flex items-center gap-1.5 z-30 pointer-events-none`}>
-          <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3 }}
+          className={`absolute top-3 right-3 px-2.5 py-1 ${theme === 'dark' ? 'bg-green-600/90' : 'bg-green-500/90'} backdrop-blur-sm rounded-full flex items-center gap-1.5 z-30 pointer-events-none`}
+        >
+          <motion.div
+            className="w-2 h-2 bg-white rounded-full"
+            animate={{ scale: [1, 1.4, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
           <span className="text-xs font-semibold text-white">LIVE</span>
-        </div>
+        </motion.div>
       )}
     </div>
 
@@ -121,37 +136,43 @@ const ProjectCard = memo(({ project, index, theme, cardBgClass, borderClass, tex
         )}
       </div>
 
-      {/* Links */}
+      {/* Links with enhanced motion */}
       <div className="flex gap-4">
         {project.liveUrl ? (
-          <a
+          <motion.a
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-dark-accent text-white hover:bg-blue-600' : 'bg-blue-600 text-white hover:bg-blue-700'} transition-colors shadow-md hover:shadow-lg`}
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className={`flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-dark-accent text-white hover:bg-blue-600' : 'bg-blue-600 text-white hover:bg-blue-700'} transition-all duration-300 shadow-md hover:shadow-lg`}
           >
             <ExternalLink size={16} />
             View Live Site
-          </a>
+          </motion.a>
         ) : project.downloadInfo?.available ? (
-          <button
+          <motion.button
             onClick={() => onDownloadClick(project)}
-            className={`flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-green-600 text-white hover:bg-green-700' : 'bg-green-600 text-white hover:bg-green-700'} transition-colors shadow-md hover:shadow-lg`}
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            className={`flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg ${theme === 'dark' ? 'bg-green-600 text-white hover:bg-green-700' : 'bg-green-600 text-white hover:bg-green-700'} transition-all duration-300 shadow-md hover:shadow-lg`}
           >
             <Download size={16} />
             Get App
-          </button>
+          </motion.button>
         ) : null}
         {project.githubUrl && (
-          <a
+          <motion.a
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center gap-2 text-sm ${textSecondaryClass} hover:${accentClass} transition-colors px-4 py-2 rounded-lg ${theme === 'dark' ? 'hover:bg-dark-border/30' : 'hover:bg-gray-100'}`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`flex items-center gap-2 text-sm ${textSecondaryClass} hover:${accentClass} transition-all duration-300 px-4 py-2 rounded-lg ${theme === 'dark' ? 'hover:bg-dark-border/30' : 'hover:bg-gray-100'}`}
           >
             <Github size={16} />
             Code
-          </a>
+          </motion.a>
         )}
       </div>
     </div>
@@ -171,8 +192,8 @@ const Projects = () => {
   }
 
   const bgClass = theme === 'dark' ? 'bg-dark-surface/80' : 'bg-gradient-to-br from-gray-50/90 via-white/90 to-blue-50/30'
-  const cardBgClass = theme === 'dark' 
-    ? 'bg-dark-bg/90' 
+  const cardBgClass = theme === 'dark'
+    ? 'bg-dark-bg/90'
     : 'bg-gradient-to-br from-white/95 via-white/90 to-blue-50/40'
   const borderClass = theme === 'dark' ? 'border-dark-border' : 'border-gray-300/70'
   const textClass = theme === 'dark' ? 'text-dark-text' : 'text-gray-900'
@@ -237,7 +258,7 @@ const Projects = () => {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                transition={{ type: "spring", duration: 0.5 }}
+                transition={{ type: 'spring', duration: 0.5 }}
                 onClick={(e) => e.stopPropagation()}
                 className={`relative w-full max-w-lg ${cardBgClass} border-2 ${borderClass} rounded-2xl p-8 shadow-2xl`}
               >
@@ -270,10 +291,10 @@ const Projects = () => {
                 <div className="space-y-3">
                   {/* Email */}
                   <a
-                    href={`mailto:${selectedProject.downloadInfo.contactEmail}?subject=BaatCheet App Download Request&body=Hi! I would like to install the BaatCheet Android app. Please send me the download link.`}
+                    href={`mailto:${selectedProject.downloadInfo.contactEmail}?subject=BaatCheet App Download Request&body=Hi! I would like to install the BaatCheet app. Please send me the download link.`}
                     className={`flex items-center space-x-4 p-4 ${theme === 'dark' ? 'bg-dark-surface hover:bg-dark-border/30' : 'bg-gray-50 hover:bg-gray-100'} rounded-lg border ${borderClass} transition-all duration-200 group`}
                   >
-                    <div className={`w-12 h-12 ${theme === 'dark' ? 'bg-blue-600/20' : 'bg-blue-100'} rounded-lg flex items-center justify-center ${theme === 'dark' ? 'group-hover:bg-blue-600/30' : 'group-hover:bg-blue-200'} transition-colors`}            >
+                    <div className={`w-12 h-12 ${theme === 'dark' ? 'bg-blue-600/20' : 'bg-blue-100'} rounded-lg flex items-center justify-center ${theme === 'dark' ? 'group-hover:bg-blue-600/30' : 'group-hover:bg-blue-200'} transition-colors`}>
                       <Mail className={`w-6 h-6 ${accentClass}`} />
                     </div>
                     <div className="flex-1">
