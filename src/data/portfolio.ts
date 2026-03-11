@@ -583,18 +583,18 @@ export const stats = [
 export const certifications = [
   {
     id: 1,
-    title: "Postman API Fundamentals Student Expert",
-    issuer: "Postman",
-    date: "July 24, 2024",
-    description: "Certified proficiency in API fundamentals, testing, and development using the Postman platform. Covers API requests, collections, environment variables, and automated testing.",
-    skills: ["API Testing", "Postman", "REST APIs", "Automation"],
-    image: "/certifications/cert1.jpg"
+    title: "Maximize Productivity With AI Tools",
+    issuer: "Coursera",
+    date: "March 11, 2026",
+    description: "Successfully completed the certification on maximizing productivity with Artificial Intelligence. Gained practical skills in utilizing advanced AI tools to automate complex tasks, optimize daily workflows, and significantly enhance professional efficiency using generative models.",
+    skills: ["AI Tools", "Prompt Engineering", "Workflow Automation", "Productivity"],
+    image: "/certifications/cert4.jpg"
   },
   {
     id: 2,
     title: "Google Cloud Certified Program - GenAI",
     issuer: "Google Cloud",
-    date: "May 25, 2024",
+    date: "March 9, 2026",
     description: "Successfully completed the Google Cloud Computing Foundations course followed by the specialized program on Generative AI. Explores LLMs, prompting, and GenAI applications on GCP.",
     skills: ["Generative AI", "Google Cloud", "LLMs", "Prompt Engineering"],
     image: "/certifications/cert2.jpg"
@@ -603,25 +603,25 @@ export const certifications = [
     id: 3,
     title: "Python 101 for Data Science",
     issuer: "Cognitive Class (IBM)",
-    date: "July 31, 2024",
+    date: "July 24, 2024",
     description: "Foundational course on Python programming tailored for Data Science. Covers data structures, loops, functions, and introductory data manipulation libraries like Pandas and Numpy.",
     skills: ["Python", "Data Science", "Pandas", "Numpy"],
     image: "/certifications/cert3.jpg"
   },
   {
     id: 4,
-    title: "Maximize Productivity With AI Tools",
-    issuer: "Coursera",
-    date: "2024",
-    description: "Successfully completed the certification on maximizing productivity with Artificial Intelligence. Gained practical skills in utilizing advanced AI tools to automate complex tasks, optimize daily workflows, and significantly enhance professional efficiency using generative models.",
-    skills: ["AI Tools", "Prompt Engineering", "Workflow Automation", "Productivity"],
-    image: "/certifications/cert4.jpg"
+    title: "Postman API Fundamentals Student Expert",
+    issuer: "Postman",
+    date: "June 30, 2024",
+    description: "Certified proficiency in API fundamentals, testing, and development using the Postman platform. Covers API requests, collections, environment variables, and automated testing.",
+    skills: ["API Testing", "Postman", "REST APIs", "Automation"],
+    image: "/certifications/cert1.jpg"
   },
   {
     id: 5,
     title: "The Python Programming A-Z Definitive Diploma",
     issuer: "Udemy",
-    date: "2024",
+    date: "February 9, 2024",
     description: "Complete and definitive diploma on Python programming covering everything from basics to advanced Python concepts, object-oriented programming, and file handling.",
     skills: ["Python", "Algorithms", "Object-Oriented Programming", "Software Development"],
     image: "/certifications/cert5.jpg"
