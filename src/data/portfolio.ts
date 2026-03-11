@@ -616,5 +616,14 @@ export const certifications = [
     description: "Successfully completed the certification on maximizing productivity with Artificial Intelligence. Gained practical skills in utilizing advanced AI tools to automate complex tasks, optimize daily workflows, and significantly enhance professional efficiency using generative models.",
     skills: ["AI Tools", "Prompt Engineering", "Workflow Automation", "Productivity"],
     image: "/certifications/cert4.jpg"
+  },
+  {
+    id: 5,
+    title: "The Python Programming A-Z Definitive Diploma",
+    issuer: "Udemy",
+    date: "2024",
+    description: "Complete and definitive diploma on Python programming covering everything from basics to advanced Python concepts, object-oriented programming, and file handling.",
+    skills: ["Python", "Algorithms", "Object-Oriented Programming", "Software Development"],
+    image: "/certifications/cert5.jpg"
   }
 ]
