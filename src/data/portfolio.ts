@@ -607,5 +607,14 @@ export const certifications = [
     description: "Foundational course on Python programming tailored for Data Science. Covers data structures, loops, functions, and introductory data manipulation libraries like Pandas and Numpy.",
     skills: ["Python", "Data Science", "Pandas", "Numpy"],
     image: "/certifications/cert3.jpg"
+  },
+  {
+    id: 4,
+    title: "Maximize Productivity With AI Tools",
+    issuer: "Coursera",
+    date: "2024",
+    description: "Successfully completed the certification on maximizing productivity with Artificial Intelligence. Gained practical skills in utilizing advanced AI tools to automate complex tasks, optimize daily workflows, and significantly enhance professional efficiency using generative models.",
+    skills: ["AI Tools", "Prompt Engineering", "Workflow Automation", "Productivity"],
+    image: "/certifications/cert4.jpg"
   }
 ]
