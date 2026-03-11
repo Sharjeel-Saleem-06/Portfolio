@@ -499,9 +499,9 @@ export const projects = [
     technologies: ["Prompt Engineering", "Cursor AI", "Markdown", "LLM Optimization", "CoT", "ToT"],
     category: "Developer Tools",
     featured: false,
-    liveUrl: null,
+    liveUrl: "https://promptcraftcursor.netlify.app/",
     githubUrl: "https://github.com/Sharjeel-Saleem-06/prompt_craft_cursor",
-    image: "/projects/prompt-craft.png",
+    image: "/projects/prompt-craft-actual.jpg",
     status: "Active",
     year: "2026",
     features: [
