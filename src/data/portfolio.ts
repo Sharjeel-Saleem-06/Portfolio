@@ -580,3 +580,32 @@ export const stats = [
   { label: "Client Satisfaction", value: "100%", icon: "💯" }
 ]
 
+export const certifications = [
+  {
+    id: 1,
+    title: "Postman API Fundamentals Student Expert",
+    issuer: "Postman",
+    date: "July 24, 2024",
+    description: "Certified proficiency in API fundamentals, testing, and development using the Postman platform. Covers API requests, collections, environment variables, and automated testing.",
+    skills: ["API Testing", "Postman", "REST APIs", "Automation"],
+    image: "/certifications/cert1.jpg"
+  },
+  {
+    id: 2,
+    title: "Google Cloud Certified Program - GenAI",
+    issuer: "Google Cloud",
+    date: "May 25, 2024",
+    description: "Successfully completed the Google Cloud Computing Foundations course followed by the specialized program on Generative AI. Explores LLMs, prompting, and GenAI applications on GCP.",
+    skills: ["Generative AI", "Google Cloud", "LLMs", "Prompt Engineering"],
+    image: "/certifications/cert2.jpg"
+  },
+  {
+    id: 3,
+    title: "Python 101 for Data Science",
+    issuer: "Cognitive Class (IBM)",
+    date: "July 31, 2024",
+    description: "Foundational course on Python programming tailored for Data Science. Covers data structures, loops, functions, and introductory data manipulation libraries like Pandas and Numpy.",
+    skills: ["Python", "Data Science", "Pandas", "Numpy"],
+    image: "/certifications/cert3.jpg"
+  }
+]
