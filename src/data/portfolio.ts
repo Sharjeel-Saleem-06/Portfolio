@@ -490,12 +490,33 @@ export const projects = [
       "Responsive Dark Mode design with scroll-reveal animations",
       "Built natively with HTML/CSS/JS without frameworks"
     ]
+  },
+  {
+    id: 19,
+    title: "Prompt Craft Cursor",
+    description: "An elite collection of meticulously engineered, role-based `.cursorrules` templates and system prompts for Cursor AI Editor.",
+    longDescription: "Prompt Craft Cursor provides highly optimized, domain-specific AI instructions to push the capabilities of the Cursor AI Editor to its absolute limit. It contains modular prompts tailored for React/Next.js, Python/FastAPI, Node.js, and Android/Jetpack Compose. It enforces best practices, architecture (like Clean Architecture), strict linters, and leverages advanced cognitive models like Chain of Thought (CoT) and Tree of Thoughts (ToT) prompting strategies.",
+    technologies: ["Prompt Engineering", "Cursor AI", "Markdown", "LLM Optimization", "CoT", "ToT"],
+    category: "Developer Tools",
+    featured: false,
+    liveUrl: null,
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/prompt_craft_cursor",
+    image: "/projects/prompt-craft.png",
+    status: "Active",
+    year: "2026",
+    features: [
+      "Domain-Specific .cursorrules templates for modern stacks",
+      "Advanced cognitive prompting techniques (CoT, ToT)",
+      "Strict security, typing, and architecture enforcements",
+      "Modular prompt guidelines for styling and testing",
+      "Custom Architect role definition for optimal AI behavior"
+    ]
   }
 ]
 
 export const experience = [
   {
-    id: 19,
+    id: 20,
     position: "Full-Stack AI Prompt Engineer",
     company: "Sideline Technologies",
     companyUrl: "https://sideline-technologies.com",
@@ -514,7 +535,7 @@ export const experience = [
     technologies: ["Python", "AI/ML", "YOLOv8", "Next.js", "React", "TypeScript", "Cursor AI", "Claude Code", "Trae AI", "Deep Learning", "Mobile Development"]
   },
   {
-    id: 20,
+    id: 21,
     position: "Prompt Engineer",
     company: "ReactiveSpace",
     companyUrl: "https://reactivespace.com",
@@ -532,7 +553,7 @@ export const experience = [
     technologies: ["Cursor AI", "Next.js", "TypeScript", "React", "Tailwind CSS", "NLP", "AI Automation", "Chatbot Development"]
   },
   {
-    id: 21,
+    id: 22,
     position: "Python Developer",
     company: "Dataventiv LLC",
     companyUrl: "https://dataventiv.com",
