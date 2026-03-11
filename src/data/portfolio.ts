@@ -448,12 +448,54 @@ export const projects = [
       "Advanced code metrics",
       "Intelligent suggestions"
     ]
+  },
+  {
+    id: 17,
+    title: "Learn RAG from Basics",
+    description: "A complete, from-scratch implementation of a Retrieval-Augmented Generation (RAG) pipeline to eliminate LLM hallucinations.",
+    longDescription: "Learn RAG from Basics is an open-source educational project that breaks down RAG into isolated, highly commented Python files. Built as the ultimate guide for software engineers, it covers data ingestion, text chunking, embedding generation using word vectors, mathematical similarity search (Cosine Distance) with ChromaDB, and prompt engineering. The project includes a complete vector search-augmented LLM pipeline with Groq and a beautiful Streamlit Web UI.",
+    technologies: ["Python", "Groq AI", "ChromaDB", "Streamlit", "FastAPI", "Vector Embeddings", "RAG"],
+    category: "AI/ML Development",
+    featured: false,
+    liveUrl: "https://learning-rag.netlify.app/",
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/Learn_RAG_from_Basics",
+    image: "/projects/learn-rag.jpg",
+    status: "Completed",
+    year: "2026",
+    features: [
+      "End-to-end RAG architecture with text chunking",
+      "Vector database integration (ChromaDB)",
+      "High-speed LLM generation using Groq API",
+      "Interactive QA Streamlit Web UI",
+      "Comprehensive educational breakdown of Embeddings & Search"
+    ]
+  },
+  {
+    id: 18,
+    title: "LLM Foundations - From Zero to AI Engineer",
+    description: "A complete, interactive learning platform for mastering Large Language Models — from tokenization to AI agents in production.",
+    longDescription: "LLM Foundations is an interactive educational platform designed for software engineers transitioning into Generative AI. It covers 14 advanced chapters across three phases (Foundations, Core Skills, and Advanced LLMs topics like RAG, LoRA, RLHF, DPO, and ReAct Agents). The platform features an adaptive Glassmorphism UI, a custom Reading Progress Bar, Sticky Navigation, Scroll Animations via Intersection Observer, and a massive set of 30 Interview Questions with optimal answers for AI Engineer roles.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Python", "Groq AI", "Sentence Transformers"],
+    category: "Web Application",
+    featured: false,
+    liveUrl: "https://llm-foundations.netlify.app/",
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/Learn_LLM_foundations_from_Basics",
+    image: "/projects/learn-llm.jpg",
+    status: "Completed",
+    year: "2026",
+    features: [
+      "14 in-depth chapters on LLMs, Attention, LoRA, and Agents",
+      "Interactive code snippets and architecture visualizers",
+      "30 professional-grade AI Engineer interview questions",
+      "Responsive Dark Mode design with scroll-reveal animations",
+      "Built natively with HTML/CSS/JS without frameworks"
+    ]
   }
 ]
 
 export const experience = [
   {
-    id: 17,
+    id: 19,
     position: "Full-Stack AI Prompt Engineer",
     company: "Sideline Technologies",
     companyUrl: "https://sideline-technologies.com",
@@ -472,7 +514,7 @@ export const experience = [
     technologies: ["Python", "AI/ML", "YOLOv8", "Next.js", "React", "TypeScript", "Cursor AI", "Claude Code", "Trae AI", "Deep Learning", "Mobile Development"]
   },
   {
-    id: 18,
+    id: 20,
     position: "Prompt Engineer",
     company: "ReactiveSpace",
     companyUrl: "https://reactivespace.com",
@@ -490,7 +532,7 @@ export const experience = [
     technologies: ["Cursor AI", "Next.js", "TypeScript", "React", "Tailwind CSS", "NLP", "AI Automation", "Chatbot Development"]
   },
   {
-    id: 19,
+    id: 21,
     position: "Python Developer",
     company: "Dataventiv LLC",
     companyUrl: "https://dataventiv.com",
