@@ -582,6 +582,15 @@ export const stats = [
 
 export const certifications = [
   {
+    id: 6,
+    title: "Discover the Art of Prompting",
+    issuer: "Coursera",
+    date: "March 14, 2026",
+    description: "Successfully completed the certification on the art of prompting. Explored advanced prompt engineering techniques, contextual structuring, and effective interaction with Large Language Models.",
+    skills: ["Prompt Engineering", "Generative AI", "LLMs", "Communication"],
+    image: "/certifications/cert6.jpg"
+  },
+  {
     id: 1,
     title: "Maximize Productivity With AI Tools",
     issuer: "Coursera",
