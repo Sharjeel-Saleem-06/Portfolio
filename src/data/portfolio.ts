@@ -511,12 +511,33 @@ export const projects = [
       "Modular prompt guidelines for styling and testing",
       "Custom Architect role definition for optimal AI behavior"
     ]
+  },
+  {
+    id: 20,
+    title: "GitHub MCP Server",
+    description: "An advanced Model Context Protocol (MCP) server for deep and rapid GitHub integration.",
+    longDescription: "The GitHub MCP Server bridges Large Language Models with GitHub's entire ecosystem securely and reliably. Through this Model Context Protocol standard, AI tools and IDEs can read repositories, fetch files, review pull requests, create issues, and automate heavy development workflows without ever compromising authentication limits or context length restrictions.",
+    technologies: ["TypeScript", "Model Context Protocol", "GitHub API", "Node.js", "AI Integration"],
+    category: "Developer Tools",
+    featured: false,
+    liveUrl: null,
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/github-mcp-server",
+    image: "/projects/mcp-github.png",
+    status: "Active",
+    year: "2026",
+    features: [
+      "Standardized Model Context Protocol implementation",
+      "Seamless and secure GitHub API integration",
+      "Read/write access to repositories, PRs, and issues",
+      "Direct integration with advanced AI assistants and IDEs",
+      "Robust TypeScript architecture"
+    ]
   }
 ]
 
 export const experience = [
   {
-    id: 20,
+    id: 21,
     position: "Full-Stack AI Prompt Engineer",
     company: "Sideline Technologies",
     companyUrl: "https://sideline-technologies.com",
@@ -535,7 +556,7 @@ export const experience = [
     technologies: ["Python", "AI/ML", "YOLOv8", "Next.js", "React", "TypeScript", "Cursor AI", "Claude Code", "Trae AI", "Deep Learning", "Mobile Development"]
   },
   {
-    id: 21,
+    id: 22,
     position: "Prompt Engineer",
     company: "ReactiveSpace",
     companyUrl: "https://reactivespace.com",
@@ -553,7 +574,7 @@ export const experience = [
     technologies: ["Cursor AI", "Next.js", "TypeScript", "React", "Tailwind CSS", "NLP", "AI Automation", "Chatbot Development"]
   },
   {
-    id: 22,
+    id: 23,
     position: "Python Developer",
     company: "Dataventiv LLC",
     companyUrl: "https://dataventiv.com",
@@ -582,7 +603,7 @@ export const stats = [
 
 export const certifications = [
   {
-    id: 6,
+    id: 24,
     title: "Discover the Art of Prompting",
     issuer: "Coursera",
     date: "March 14, 2026",
@@ -591,7 +612,7 @@ export const certifications = [
     image: "/certifications/cert6.jpg"
   },
   {
-    id: 1,
+    id: 25,
     title: "Maximize Productivity With AI Tools",
     issuer: "Coursera",
     date: "March 11, 2026",
@@ -600,7 +621,7 @@ export const certifications = [
     image: "/certifications/cert4.jpg"
   },
   {
-    id: 2,
+    id: 26,
     title: "Google Cloud Certified Program - GenAI",
     issuer: "Google Cloud",
     date: "March 9, 2026",
@@ -609,7 +630,7 @@ export const certifications = [
     image: "/certifications/cert2.jpg"
   },
   {
-    id: 3,
+    id: 27,
     title: "Python 101 for Data Science",
     issuer: "Cognitive Class (IBM)",
     date: "July 24, 2024",
@@ -618,7 +639,7 @@ export const certifications = [
     image: "/certifications/cert3.jpg"
   },
   {
-    id: 4,
+    id: 28,
     title: "Postman API Fundamentals Student Expert",
     issuer: "Postman",
     date: "June 30, 2024",
@@ -627,7 +648,7 @@ export const certifications = [
     image: "/certifications/cert1.jpg"
   },
   {
-    id: 5,
+    id: 29,
     title: "The Python Programming A-Z Definitive Diploma",
     issuer: "Udemy",
     date: "February 9, 2024",
