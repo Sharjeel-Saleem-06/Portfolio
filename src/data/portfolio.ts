@@ -532,12 +532,75 @@ export const projects = [
       "Direct integration with advanced AI assistants and IDEs",
       "Robust TypeScript architecture"
     ]
+  },
+  {
+    id: 21,
+    title: "Automated Omnichannel Content Repurposer",
+    description: "A multi-agent AI system that transforms YouTube video transcripts into blog posts, tweets, and LinkedIn posts — powered by Claude and orchestrated with LangGraph.",
+    longDescription: "This CLI-based automation system takes any YouTube video URL and runs a 4-stage LangGraph StateGraph pipeline. The Blog Agent writes 800–1200 word SEO articles, the Twitter Agent crafts 5 viral platform-optimized tweets, and the LinkedIn Agent produces thought leadership content — all reviewed by an Editor Agent with quality scoring. All outputs are saved to structured files. No UI, pure production-grade agentic automation.",
+    technologies: ["Python", "Claude API", "LangGraph", "Multi-Agent", "LangChain", "youtube-transcript-api", "Prompt Engineering"],
+    category: "AI/ML Development",
+    featured: true,
+    liveUrl: null,
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/Autoamted_Omnichannel_Content_Repurposer",
+    image: "/projects/omnichannel-repurposer.png",
+    status: "Completed",
+    year: "2026",
+    features: [
+      "4-agent LangGraph StateGraph pipeline (Blog → Twitter → LinkedIn → Editor)",
+      "YouTube transcript extraction with no API key required",
+      "SEO-optimized blog, 5 viral tweets, thought leadership LinkedIn post",
+      "Editor Agent with quality scoring and structured JSON output",
+      "Cost-efficient at ~$0.03–$0.08 per full video repurpose"
+    ]
+  },
+  {
+    id: 22,
+    title: "Automated Multi-Agent Code Reviewer",
+    description: "A production-grade multi-agent system that reviews Pull Request code changes using 3 specialized Claude-powered agents for Logic, Security, and Performance.",
+    longDescription: "This CLI automation runs a LangGraph-based 4-node state machine where three independent AI agents (Logic Bug Detector, Security Vulnerability Scanner, and Performance Analyzer) inspect code diffs in parallel. A Supervisor Agent merges and ranks all findings into a final Markdown PR review report. Includes PyGithub integration, tool-calling, precision/recall evaluation, and cost-tracking (~$0.004 per quick review).",
+    technologies: ["Python", "Claude API", "LangGraph", "PyGithub", "Multi-Agent", "Tool Calling", "Evaluation"],
+    category: "AI/ML Development",
+    featured: true,
+    liveUrl: null,
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/Automated_Code_Reviewer",
+    image: "/projects/auto-code-reviewer.png",
+    status: "Completed",
+    year: "2026",
+    features: [
+      "3 parallel specialist AI agents: Logic, Security, Performance",
+      "LangGraph 4-node StateGraph with shared ReviewState",
+      "Tool calling with GitHub API (real + simulated PR modes)",
+      "Supervisor Agent for final merged Markdown PR report",
+      "Evaluation suite with Precision/Recall metrics against known test cases"
+    ]
+  },
+  {
+    id: 23,
+    title: "Automated AI Research Analyst",
+    description: "An advanced 5-agent agentic AI pipeline that autonomously plans, researches, analyzes, writes, and critiques professional research reports on any topic.",
+    longDescription: "This is the most complex CLI automation in the portfolio — a full 5-agent agentic AI pipeline powered by Claude and LangGraph with conditional routing. The Planner decomposes topics, the Researcher makes 40+ autonomous tool calls (web search, page extraction, note-saving), the Analyst synthesizes with confidence levels, the Writer produces 1000–1500 word research reports, and the Critic quality-gates with hallucination detection. Reports are PUBLISH or REVISE-routed back through LangGraph.",
+    technologies: ["Python", "Claude API", "LangGraph", "LangChain", "DuckDuckGo", "BeautifulSoup4", "Agentic AI", "Tool Calling"],
+    category: "AI/ML Development",
+    featured: true,
+    liveUrl: null,
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/Automated_AI_Research_Analyst",
+    image: "/projects/ai-research-analyst.png",
+    status: "Completed",
+    year: "2026",
+    features: [
+      "5-agent LangGraph pipeline: Planner → Researcher → Analyst → Writer → Critic",
+      "Researcher makes 40+ autonomous tool calls per run (web search, extract, save)",
+      "Conditional routing: LangGraph routes to PUBLISH or REVISE based on Critic",
+      "Hallucination detection: Critic cross-references report against raw research data",
+      "Research memory: saved notes accumulate structured knowledge during run"
+    ]
   }
 ]
 
 export const experience = [
   {
-    id: 21,
+    id: 24,
     position: "Full-Stack AI Prompt Engineer",
     company: "Sideline Technologies",
     companyUrl: "https://sideline-technologies.com",
@@ -556,7 +619,7 @@ export const experience = [
     technologies: ["Python", "AI/ML", "YOLOv8", "Next.js", "React", "TypeScript", "Cursor AI", "Claude Code", "Trae AI", "Deep Learning", "Mobile Development"]
   },
   {
-    id: 22,
+    id: 25,
     position: "Prompt Engineer",
     company: "ReactiveSpace",
     companyUrl: "https://reactivespace.com",
@@ -574,7 +637,7 @@ export const experience = [
     technologies: ["Cursor AI", "Next.js", "TypeScript", "React", "Tailwind CSS", "NLP", "AI Automation", "Chatbot Development"]
   },
   {
-    id: 23,
+    id: 26,
     position: "Python Developer",
     company: "Dataventiv LLC",
     companyUrl: "https://dataventiv.com",
@@ -603,7 +666,7 @@ export const stats = [
 
 export const certifications = [
   {
-    id: 24,
+    id: 27,
     title: "Discover the Art of Prompting",
     issuer: "Coursera",
     date: "March 14, 2026",
@@ -612,7 +675,7 @@ export const certifications = [
     image: "/certifications/cert6.jpg"
   },
   {
-    id: 25,
+    id: 28,
     title: "Maximize Productivity With AI Tools",
     issuer: "Coursera",
     date: "March 11, 2026",
@@ -621,7 +684,7 @@ export const certifications = [
     image: "/certifications/cert4.jpg"
   },
   {
-    id: 26,
+    id: 29,
     title: "Google Cloud Certified Program - GenAI",
     issuer: "Google Cloud",
     date: "March 9, 2026",
@@ -630,7 +693,7 @@ export const certifications = [
     image: "/certifications/cert2.jpg"
   },
   {
-    id: 27,
+    id: 30,
     title: "Python 101 for Data Science",
     issuer: "Cognitive Class (IBM)",
     date: "July 24, 2024",
@@ -639,7 +702,7 @@ export const certifications = [
     image: "/certifications/cert3.jpg"
   },
   {
-    id: 28,
+    id: 31,
     title: "Postman API Fundamentals Student Expert",
     issuer: "Postman",
     date: "June 30, 2024",
@@ -648,7 +711,7 @@ export const certifications = [
     image: "/certifications/cert1.jpg"
   },
   {
-    id: 29,
+    id: 32,
     title: "The Python Programming A-Z Definitive Diploma",
     issuer: "Udemy",
     date: "February 9, 2024",
