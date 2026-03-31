@@ -595,12 +595,33 @@ export const projects = [
       "Hallucination detection: Critic cross-references report against raw research data",
       "Research memory: saved notes accumulate structured knowledge during run"
     ]
+  },
+  {
+    id: 24,
+    title: "GitHub Workflow Automation",
+    description: "An advanced event-driven automation platform powered by FastAPI, Celery, and Claude AI for automated GitHub pull request reviews with inline fix prompts.",
+    longDescription: "This production-hardened platform acts as a GitHub webhook listener that spawns Celery background workers to execute parallel AI agents using LangGraph and the Claude API. It performs static analysis, logic checks, and security scans directly on pull request diffs, commenting on files with real-time feedback and fix prompts. Featuring robust architecture like Redis Pub/Sub, PostgreSQL, and idempotency guarantees.",
+    technologies: ["Python", "FastAPI", "Celery", "PostgreSQL", "Redis", "Claude AI", "LangGraph"],
+    category: "AI/ML Development",
+    featured: true,
+    liveUrl: "https://githubclaudeworkflow.netlify.app/#overview",
+    githubUrl: "https://github.com/Sharjeel-Saleem-06/Github_Workflow_Automation",
+    image: "/projects/github-workflow.png",
+    status: "Active",
+    year: "2026",
+    features: [
+      "FastAPI backend with HMAC webhook verification and idempotency",
+      "Celery asynchronous workers executing parallel LangGraph agents",
+      "Automated pull request diff analysis via the GitHub API",
+      "Inline code comments with actionable AI-generated fix prompts",
+      "Real-time SSE notifications mapped via Redis Pub/Sub"
+    ]
   }
 ]
 
 export const experience = [
   {
-    id: 24,
+    id: 25,
     position: "Full-Stack AI Prompt Engineer",
     company: "Sideline Technologies",
     companyUrl: "https://sideline-technologies.com",
@@ -619,7 +640,7 @@ export const experience = [
     technologies: ["Python", "AI/ML", "YOLOv8", "Next.js", "React", "TypeScript", "Cursor AI", "Claude Code", "Trae AI", "Deep Learning", "Mobile Development"]
   },
   {
-    id: 25,
+    id: 26,
     position: "Prompt Engineer",
     company: "ReactiveSpace",
     companyUrl: "https://reactivespace.com",
@@ -637,7 +658,7 @@ export const experience = [
     technologies: ["Cursor AI", "Next.js", "TypeScript", "React", "Tailwind CSS", "NLP", "AI Automation", "Chatbot Development"]
   },
   {
-    id: 26,
+    id: 27,
     position: "Python Developer",
     company: "Dataventiv LLC",
     companyUrl: "https://dataventiv.com",
@@ -666,7 +687,7 @@ export const stats = [
 
 export const certifications = [
   {
-    id: 27,
+    id: 28,
     title: "Discover the Art of Prompting",
     issuer: "Coursera",
     date: "March 14, 2026",
@@ -675,7 +696,7 @@ export const certifications = [
     image: "/certifications/cert6.jpg"
   },
   {
-    id: 28,
+    id: 29,
     title: "Maximize Productivity With AI Tools",
     issuer: "Coursera",
     date: "March 11, 2026",
@@ -684,7 +705,7 @@ export const certifications = [
     image: "/certifications/cert4.jpg"
   },
   {
-    id: 29,
+    id: 30,
     title: "Google Cloud Certified Program - GenAI",
     issuer: "Google Cloud",
     date: "March 9, 2026",
@@ -693,7 +714,7 @@ export const certifications = [
     image: "/certifications/cert2.jpg"
   },
   {
-    id: 30,
+    id: 31,
     title: "Python 101 for Data Science",
     issuer: "Cognitive Class (IBM)",
     date: "July 24, 2024",
@@ -702,7 +723,7 @@ export const certifications = [
     image: "/certifications/cert3.jpg"
   },
   {
-    id: 31,
+    id: 32,
     title: "Postman API Fundamentals Student Expert",
     issuer: "Postman",
     date: "June 30, 2024",
@@ -711,7 +732,7 @@ export const certifications = [
     image: "/certifications/cert1.jpg"
   },
   {
-    id: 32,
+    id: 33,
     title: "The Python Programming A-Z Definitive Diploma",
     issuer: "Udemy",
     date: "February 9, 2024",
